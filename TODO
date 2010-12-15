@@ -3,4 +3,5 @@
 
 - Get rid of the MinusBlock and all the Minus hardcoded stuff somehow
 - Parse more stuff for wiki symbols (paragraphs, titles)
-- Remove referebces to "UVs" (UTBM legacy...)
+- Remove references to "UVs" (UTBM legacy...)
+- Easy deployment script?

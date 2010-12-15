@@ -138,6 +138,7 @@ class ElementFactory
             break;
    		
         case DELETE_ACTION:
+            // TODO: fix file deletion
             DatabaseConnection::instance()->delete($infos[ELEMENT],$infos[ID]);
             break;
    		
