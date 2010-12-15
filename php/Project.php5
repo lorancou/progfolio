@@ -302,7 +302,7 @@ class Project extends Element
         $form->longText("Body","body_".Progfolio::instance()->language,$this->body);
     }
 
-    public final function gestion()
+    public final function projectManagement()
     {
         $title = new Title(2,"Manage project: ".$this->id);
         $title->display();
@@ -320,7 +320,7 @@ class Project extends Element
             $data = $connection->data();
             $liste[$data[ID]] = $data[ID];
         }
-        $aimage = new Form("aimage","?page=project&mode=gestion&id-unix=".$this->id);
+        $aimage = new Form("aimage","?page=project&mode=proj-man&id-unix=".$this->id);
         $aimage->begin();
         $aimage->hidden(ACTION,ADD_IMAGE_ACTION);
         $aimage->hidden("project_".ID,$this->id);
@@ -333,9 +333,9 @@ class Project extends Element
         foreach ($images as $image)
         {
             $image->thumbnail();
-            $simage = new Form("simage-".$image->id,"?page=project&mode=gestion&id-unix=".$this->id);
+            $simage = new Form("simage-".$image->id,"?page=project&mode=proj-man&id-unix=".$this->id);
             $simage->begin();
-            $simage->hidden(ACTION,DELETE_ACTION_IMAGE);
+            $simage->hidden(ACTION,DELETE_ACTION);
             $aimage->hidden("project_".ID,$this->id);
             $aimage->confirm("confirm","Delete");
             $aimage->end();
@@ -352,7 +352,7 @@ class Project extends Element
             $data = $connection->data();
             $liste[$data[ID]] = $data[ID];
         }
-        $afile = new Form("afile","?page=project&mode=gestion&id-unix=".$this->id);
+        $afile = new Form("afile","?page=project&mode=proj-man&id-unix=".$this->id);
         $afile->begin();
         $afile->hidden(ACTION,ADD_FILE_ACTION);
         $afile->hidden("project_".ID,$this->id);
@@ -365,9 +365,9 @@ class Project extends Element
         foreach ($files as $file)
         {
             $file->thumbnail();
-            $sfile = new Form("sfile-".$file->id,"?page=project&mode=gestion&id-unix=".$this->id);
+            $sfile = new Form("sfile-".$file->id,"?page=project&mode=proj-man&id-unix=".$this->id);
             $sfile->begin();
-            $sfile->hidden(ACTION,DELETE_ACTION_FICHIER);
+            $sfile->hidden(ACTION,DELETE_ACTION);
             $afile->hidden("project_".ID,$this->id);
             $afile->confirm("confirm","Delete");
             $afile->end();

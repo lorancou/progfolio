@@ -132,7 +132,7 @@ class SimpleBlock extends Block
 				$this->element->code,
 				$this->idElement);
 			$bulle->display();
-			$this->element->gestion();
+			$this->element->projectManagement();
 			break;
 			
         case PREVIEW_MODE:
