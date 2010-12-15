@@ -1,4 +1,5 @@
 <?php
+session_start(); // shouldn't move! some web hosts don't like whitespaces before this
 
   /*
    * init.inc.php5
@@ -11,7 +12,6 @@
    * This program is free software - see README for details.
    */
 
-session_start();
 
 // load classes code automatically
 function __autoload($class_name) {
