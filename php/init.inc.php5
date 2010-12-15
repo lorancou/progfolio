@@ -38,7 +38,7 @@ function createThumbnail($dir,$name)
 	$hauteur=100;
 	if ($info[2] == 3)
 		$src = imagecreatefrompng($path);
-	else die( "Mauvaise extension d'image: " . $info[2] );
+	else die( "Bad image extension: " . $info[2] );
 	$img = imagecreatetruecolor(round(($hauteur/$info[1])*$info[0]), $hauteur);
 	imagecopyresampled($img, $src, 0, 0, 0, 0, round(($hauteur/$info[1])*$info[0]), $hauteur, $info[0], $info[1]);
 	imagepng($img, $dir . '/.' . $name);
