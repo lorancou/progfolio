@@ -1,0 +1,50 @@
+<html>
+
+  <head>
+
+    <title>Minus Cube 0.0.1</title>
+    
+	<!--[if IE]><script type="text/javascript" src="../excanvas.js"></script><![endif]-->
+	
+    <script type="text/javascript" src="../j3d/trigo.js"></script>
+    <script type="text/javascript" src="../j3d/intersect.js"></script>
+    <script type="text/javascript" src="../j3d/matrix.js"></script>
+    <script type="text/javascript" src="../j3d/vector.js"></script>
+    <script type="text/javascript" src="../j3d/light.js"></script>
+    <script type="text/javascript" src="../j3d/firebugx.js"></script>
+    <script type="text/javascript" src="../j3d/log.js"></script>
+    <script type="text/javascript" src="../j3d/model.js"></script>
+    <script type="text/javascript" src="../j3d/util.js"></script>
+    <script type="text/javascript" src="../j3d/sort.js"></script>
+    <script type="text/javascript" src="../j3d/clip.js"></script>
+
+    <script type="text/javascript" src="camera.js"></script>
+    <script type="text/javascript" src="input.js"></script>
+    <script type="text/javascript" src="mesh.js"></script>
+    <script type="text/javascript" src="element.js"></script>
+    <script type="text/javascript" src="cube.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+	
+    <link rel="stylesheet" type="text/css" href="minus.css"></link>
+
+  </head>
+
+  <body onload="main_init();">
+
+    <div id="title">
+      Minus Cube
+      | <span id="fps">0</span> fps
+      | <span id="avg">0</span> avg
+      | <span id="tri">0</span> tri
+    </div>
+    <div><canvas id="main" width="400" height="300"></canvas></div>
+    <div id="command">
+      <a onclick="minus_input_scramble();">scramble</a>
+      | <a onclick="minus_input_solve();">solve</a>
+    </div>
+    <div id="output"><ul><li>Minus Cube 0.0.1</li></ul></div>
+
+  </body>
+
+</html>

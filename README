@@ -1,0 +1,43 @@
+                                   PROGFOLIO
+                            A programmer's portfolio
+
+Copyright (c) 2006-2010 Laurent Couvidou
+http://lorancou.free.fr/index.php5?page=project&id-unix=progfolio
+Contact: lorancou@free.fr
+Formerly named "Page perso" for versions 0.1, 0.2 and 0.3
+
+Wiki parser (wiki.inc.php5)
+Copyright (c) Mildred
+http://louve.dyndns.org/projets/wikiparser/index.html.fr
+http://mildred632.free.fr/projets/wikiparser/index.html.fr
+
+Full Operating system language detection (lang.inc.php5)
+Copyright (c) Techpatterns.com
+http://techpatterns.com/downloads/php_language_detection.php
+
+                                    Setup
+
+Prerequisites:
+- Web server with PHP5 support
+- MySQL server (version >= 5.0)
+
+Copy the file php/config.inc.php5.template to php/config.inc.php5, and enter the
+connection info for your MySQL server in this new file. Make sure you also set
+proper permissions on this file so that nobody can read your plain text password.
+Then import db/structure.sql in your server's database (using phpmyadmin for
+instance). It's ready! Just open index.php5 in a browser. Contact me for
+troubleshooting.
+
+                                   LICENSE
+
+This program is free software: you can redistribute it and/or modify it under the
+terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this
+program (LICENSE file). If not, see <http://www.gnu.org/licenses/>.
