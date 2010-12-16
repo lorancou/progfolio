@@ -33,9 +33,7 @@ class Article extends Element
         $title = new Title(2,$this->name);
         $title->display();
 
-        $parser = new WikiParser();
-
-        $body = new Paragraph(NULL,$parser->parse($this->body));
+        $body = new Paragraph(NULL,$this->body);
         $body->display();
     }
 

@@ -13,9 +13,6 @@
 
 class Title implements IDisplayableContent
 {
-
-	// TODO: add a parser in this class
-	
 	protected $level;
 	protected $title;
 	
@@ -36,7 +33,7 @@ class Title implements IDisplayableContent
     public function display()
     {
         echo "<h$this->level>";
-        echo $this->title; // parser here
+        echo WikiParser::instance()->parse($this->title); // parser here
         echo "</h$this->level>\n";
 	}   
 	

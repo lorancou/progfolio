@@ -275,6 +275,16 @@ class parseWiki{
 
 
 class WikiParser extends parseWiki{
+
+    // singleton
+    private static $instance;
+    private function __construct(){}
+    public static function instance()
+    {
+        if (!isset(self::$instance)) self::$instance = new WikiParser();
+        return self::$instance;
+    }
+
 	function parse($str, $self="parse"){
 		$this->defaultConfig();
 		$this->setOpt('fct_blank_text', 'specialchars');

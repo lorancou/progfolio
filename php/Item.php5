@@ -38,8 +38,7 @@ class Item extends Element
         $title = new Title(2,$this->name);
         $title->display();
 
-        $parser = new WikiParser();
-        $desc = new Paragraph( NULL, $parser->parse( $this->description ) );
+        $desc = new Paragraph(NULL, $this->description);
         $desc->display();
 
         $link = new Link( $this->url, $this->url );

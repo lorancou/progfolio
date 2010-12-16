@@ -165,12 +165,10 @@ class Project extends Element
             $par->end();
         }
 
-        $parser = new WikiParser();
-
-        $desc = new Paragraph(NULL,$parser->parse($this->description));
+        $desc = new Paragraph(NULL,$this->description);
         $desc->display();
 
-        $body = new Paragraph(NULL,$parser->parse($this->body));
+        $body = new Paragraph(NULL,$this->body);
         $body->display();
 
 
@@ -220,9 +218,7 @@ class Project extends Element
             $par->end();
         }
 
-        $parser = new WikiParser();
-
-        $desc = new Paragraph(NULL,$parser->parse($this->description));
+        $desc = new Paragraph(NULL,$this->description);
         $desc->display();
 
         $images = $this->retrieveImages();

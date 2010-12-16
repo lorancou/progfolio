@@ -13,9 +13,6 @@
 
 class Paragraph implements IDisplayableContent
 {
-
-	// TODO: add a parser in this class
-
 	protected $type;
 	protected $texte;
 	
@@ -31,7 +28,7 @@ class Paragraph implements IDisplayableContent
     public function display()
     {
         echo "<p class=\"$this->type\">\n";
-        echo $this->texte; // parser here
+        echo WikiParser::instance()->parse($this->texte);
         echo "</p>\n";
 	}   
 	

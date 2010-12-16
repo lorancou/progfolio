@@ -2,6 +2,6 @@
                                  The TODO List
 
 - Get rid of the MinusBlock and all the Minus hardcoded stuff somehow
-- Parse more stuff for wiki symbols (paragraphs, titles)
+- Title, header, footer in config file
 - Remove references to "UVs" (UTBM legacy...)
 - Easy deployment script?
