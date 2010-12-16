@@ -23,6 +23,11 @@ function minus_game()
     this.camera = null;
     this.cube = null;
     this.update_needed = true;
+
+    this.noinputtimer = 0.0;
+    this.noinputspeed = 0.0;
+    this.noinputrandx = 0.0;
+    this.noinputrandy = 0.0;
     
     this.init = function()
     {
@@ -39,38 +44,86 @@ function minus_game()
         if ( minus_input_rmb_pressed )
         {
             this.sort.pick_group = true;
+            this.noinputtimer = 0.0;
         }
         else if ( minus_input_left_pressed )
         {
             this.cube.rotdy = ROT_STEP;
 //             minus_input_left_pressed = false;
+            this.noinputtimer = 0.0;
         }
         else if ( minus_input_up_pressed )
         {
             this.cube.rotdx = -ROT_STEP;
 //             minus_input_up_pressed = false;
+            this.noinputtimer = 0.0;
         }
         else if ( minus_input_right_pressed )
         {
             this.cube.rotdy = -ROT_STEP;
 //             minus_input_right_pressed = false;
+            this.noinputtimer = 0.0;
         }
         else if ( minus_input_down_pressed )
         {
             this.cube.rotdx = ROT_STEP;
 //             minus_input_down_pressed = false;
+            this.noinputtimer = 0.0;
         }
         else if ( minus_input_lmb_pressed ) //&& minus_input_prev_valid )
         {
             this.cube.rotdx = minus_input_dy / 100.0;
             this.cube.rotdy = - minus_input_dx / 100.0;
+            this.noinputtimer = 0.0;
         }
         else
         {
             minus_input_dx = 0;            
             minus_input_dy = 0;
-            if ( !this.update_needed ) return;
-            this.update_needed = false;
+
+            this.noinputtimer += time_step;
+            if (this.noinputtimer < 10000.0 )
+            {
+                if (!this.update_needed) return;
+                this.update_needed = false;
+            }
+            else if (this.noinputtimer < 15000.0)
+            {
+                if (!this.update_needed)
+                {
+                    log("no input for 10s, start moving a bit");
+                    this.noinputrandx = Math.random() - 0.5;
+                    this.noinputrandy = Math.random() - 0.5;
+                }
+                this.update_needed = true;
+                if (this.noinputspeed < 0.01)
+                {
+                    this.noinputspeed += time_step * 0.000001;
+                    if (this.noinputspeed > 0.01)
+                    {
+                        log("full speed");
+                        this.noinputspeed = 0.01;
+                    }
+                }
+                this.cube.rotdx = this.noinputspeed * this.noinputrandx;
+                this.cube.rotdy = this.noinputspeed * this.noinputrandy;
+            }
+            else
+            {
+                if (this.noinputspeed > 0.0)
+                {
+                    this.noinputspeed -= time_step * 0.000001;
+                    if (this.noinputspeed < 0.0)
+                    {
+                        log("stop moving");
+                        this.noinputspeed = 0.0;
+                        this.noinputtimer = 0.0;
+                        this.update_needed = false;
+                    }
+                }
+                this.cube.rotdx = this.noinputspeed * this.noinputrandx;
+                this.cube.rotdy = this.noinputspeed * this.noinputrandy;
+            }
         }
         
         // Camera
