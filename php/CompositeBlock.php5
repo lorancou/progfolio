@@ -98,8 +98,8 @@ class CompositeBlock extends Block
             $sort = $this->elementCode."_name";
             break;
         case "date":
-            // can't really do that... need to normalize date fields somehow?
-            $sort = $this->elementCode."_date_begin";
+            // can't really do that everywhere... need to normalize somehow?
+            $sort = $this->elementCode."_date_end";
             break;
         case "weight":
             // TODO
