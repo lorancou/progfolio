@@ -18,8 +18,8 @@ function minus_cube()
     // .. public
 
     this.padding = 1.0;
-    this.rotdx = -PI/4;
-    this.rotdy = -PI/4;
+    this.rotdx = 2.0 * Math.random() * PI - PI;
+    this.rotdy = 2.0 * Math.random() * PI - PI;
 
     this.frame = function( time_step )
     {
