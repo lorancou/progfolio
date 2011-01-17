@@ -79,6 +79,9 @@ class ClassicLayout implements ILayout
             "Language Icon", "Language Icon",
             "http://www.languageicon.org");
         $langicon->display();
+        echo "&nbsp";
+        $servericon = new ServerIcon();
+        $servericon->display();
         $par->end();
         $div->end();
 

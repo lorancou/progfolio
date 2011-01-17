@@ -46,4 +46,7 @@ define("MINUS_SOLVE", "résoudre");
 define("IF_NEEDED_AR", "Si besoin...");
 define("DOWNLOAD_AR", "... téléchargez Adobe Reader");
 
+define("SERVER_ICON_ONLINE", " en ligne");
+define("SERVER_ICON_OFFLINE", " hors ligne");
+
 ?>
