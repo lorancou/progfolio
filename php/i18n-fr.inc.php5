@@ -5,7 +5,7 @@
    * ----------------------------------------------------------------------------
    *
    * Progfolio
-   * Copyright (c) 2005-2010 Laurent Couvidou
+   * Copyright (c) 2005-2011 Laurent Couvidou
    * Contact: lorancou@free.fr
    *
    * This program is free software - see README for details.
@@ -18,7 +18,7 @@ define("APPLY", "Appliquer");
 define("MENU", "Menu");
 define("LINKS", "Links");
 define("WEATHER", "À Charleroi...");
-define("FOOTER", '2005-2010 | Tous droits réservés');
+define("FOOTER", '2005-2011 | Tous droits réservés');
 define("MAINTENANCE_IN_PROGRESS", 'Maintenance en cours...');
 
 define("BROWSER_LANGUAGE", "Utiliser la language du navigateur");
