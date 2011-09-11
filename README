@@ -29,8 +29,9 @@ instance). It's ready! Just open index.php5 in a browser. Contact me for
 troubleshooting.
 
 NB: this code relies on magic_quotes_gpc set to "On" in php.ini. It's now
-deprecated with PHP 5.3.0 and set to "Off" by default ; make sure use set it back
-to "On" or you'll get trouble with single quotes and other stuff.
+deprecated with PHP 5.3.0 and set to "Off" by default ; if your PHP version is that
+recent, make sure you set it back to "On" or you'll get trouble with single quotes,
+backslashes and others.
 
                                    LICENSE
 
