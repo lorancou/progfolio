@@ -16,7 +16,7 @@ class LayoutFactory
 
     private $layouts = array (
         CLASSIC_LAYOUT   => "ClassicLayout",
-        MAINTENANCE_LAYOUT => "MaintenanceLayout", // TODO: use this!
+        MAINTENANCE_LAYOUT => "MaintenanceLayout",
         );
 
     // singleton

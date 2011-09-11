@@ -127,6 +127,10 @@ class Progfolio
             $layout=LayoutFactory::instance()->createLayout( $_GET[LAYOUT] );
             $layout->display();
         }   	
+        else if (file_exists('maintenance')) {
+            $arr = new MaintenanceLayout();
+            $arr->display();
+        }
         else {
             $arr = new ClassicLayout();
             $arr->display();
