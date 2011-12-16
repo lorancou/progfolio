@@ -18,9 +18,6 @@ class WelcomePage extends Page
 	{
 		$bloc = new SimpleBlock(ARTICLE_ELEMENT,'welcome',DISPLAY_MODE);
 		$bloc->display();
-
-        $bloc = new MinusBlock();
-        $bloc->display();
 	}
 
 }

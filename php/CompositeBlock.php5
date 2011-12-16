@@ -58,15 +58,9 @@ class CompositeBlock extends Block
         {
             if ( $i > 0 ) 
             {
-                echo "<div class=\"hr\"><hr /></div>\n";
+                echo "<div class=\"hr\"><hr /></div>\n"; // TODO HR class?
             }
 
-            //$continue = $connection->next();
-            //if ($continue==TRUE)
-            //  echo "TRUE";
-            //else
-            //  echo "FALSE";
-            //$data = $connection->data();
             $data = array();
             $length = 1+strlen($this->elementCode);
             foreach ($line as $key => $value)

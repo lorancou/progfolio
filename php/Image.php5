@@ -29,11 +29,28 @@ class Image implements IDisplayableContent
 	
 	public final function display()
 	{
-		if ($this->link!=NULL) echo "<a href=\"$this->link\">";
-		echo "<img src=\"$this->url\" alt=\"$this->alt\"";
-		if ($this->title!=NULL) echo " title=\"$this->title\"";
-		echo " />";
-		if ($this->link!=NULL) echo "</a>";
+        $str = NULL;
+		
+        if ($this->link!=NULL)
+        {
+            $str .= '<a href="'.$this->link.'">';
+        }
+		
+        $str .= '<img src="'.$this->url.'" alt="'.$this->alt.'"';
+
+		if ($this->title!=NULL)
+        {
+            $str .= ' title="'.$this->title.'"';
+        }
+		
+        $str .= ' />';
+
+		if ($this->link!=NULL)
+        {
+            $str .= '</a>';
+        }
+        
+        echoFlat($str);
 	}
 
 }

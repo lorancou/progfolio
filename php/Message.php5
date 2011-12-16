@@ -21,20 +21,27 @@ class Message
    
     private $type;
     private $class;
-    private $texte;
+    private $text;
 
-    public function __construct($type,$class,$texte)
+    public function __construct($type,$class,$text)
     {
         $this->type = $type;
         $this->class = $class;
-        $this->texte = $texte;
+        $this->text = $text;
     }
    
     public function display()
     {
-        echo "<p class=\"$this->type\">\n";
-        echo "$this->class: $this->texte\n";
-        echo "</p>\n";
+        if (empty($this->class))
+        {
+            $par = new Paragraph($this->type, $this->text);
+            $par->display();
+        }
+        else
+        {
+            $par = new Paragraph($this->type, '['.$this->class.'] '.$this->text);
+            $par->display();
+        }
     }   
 
 }

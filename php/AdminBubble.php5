@@ -39,19 +39,23 @@ class AdminBubble implements IDisplayableContent
 
         if (($this->mode&self::EDIT)!=0)
         {
-            echo "<a href=\"?".$this->beginUrl."mode=".EDIT_MODE."\">[ ed ]</a>\n";
+            $link = new Link("[ ed ]", "?" . $this->beginUrl . "mode=" . EDIT_MODE);
+            $link->display();
         }
         if (($this->mode&self::PROJECT_MANAGEMENT)!=0)
         {
-            echo "<a href=\"?".$this->beginUrl."mode=".PROJECT_MANAGEMENT_MODE."\">[ fi ]</a>\n";
+            $link = new Link("[ fi ]", "?" . $this->beginUrl . "mode=" . PROJECT_MANAGEMENT_MODE);
+            $link->display();
         }
         if (($this->mode&self::DELETE)!=0)
         {
-            echo "<a href=\"?".$this->beginUrl."mode=".DELETE_MODE."\">[ × ]</a>\n";
+            $link = new Link("[ x ]", "?" . $this->beginUrl . "mode=" . DELETE_MODE);
+            $link->display();
         }
         if (($this->mode&self::BACK)!=0)
         {
-            echo "<a href=\"?".$this->beginUrl."mode=".DISPLAY_MODE."\">[ < ]</a>\n";
+            $link = new Link("[ < ]", "?" . $this->beginUrl . "mode=" . DISPLAY_MODE);
+            $link->display();
         }
 
         $div->end();

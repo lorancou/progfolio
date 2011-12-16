@@ -13,86 +13,64 @@
 
 class XhtmlCode implements IDisplayableContainer
 {
-	protected $minus;
+	protected $page;
    
-	public function __construct($minus)
+	public function __construct($page)
     {
-        $this->minus = $minus;
+        $this->page = $page;
     }
 
 	public function begin()
 	{
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        // XHTML doctype
+        echoFlat('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">');
+        
+        // hello world, I'm the first HTML element
+        echoOpen('<html xmlns="http://www.w3.org/1999/xhtml">');
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+        // let's start with the headers
+        echoOpen('<head>');
 
-<head>
+        // static XHTML headers
+        echoFlat('<meta http-equiv="content-type" content="text/html; charset=utf-8" />');
+        echoFlat('<title>'.HEADER.'</title>');
+        echoFlat('<meta name="description" content="'.DESCRIPTION.'" />');
+        echoFlat('<meta name="keywords" content="'.KEYWORDS.'" />');
+        echoFlat('<meta name="robots" content="all"/>');
+        echoFlat('<link rel="stylesheet" type="text/css" href="style/styles.css" media="screen" />');
+        echoFlat('<link rel="icon" type="image/png" href="images/icon.png"/>');
 
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<?
-        echo ( "<title>" . HEADER ."</title>\n" );
-        echo ( '<meta name="description" content="' . DESCRIPTION .'" />' . "\n" );
-        echo ( '<meta name="keywords" content="' . KEYWORDS .'" />' . "\n" );
-?>
-<meta name="robots" content="all" />
+        // some more header stuff on page demand
+        if ($page && $page->hasExtraHeader())
+        {
+            $page->echoExtraHeader();
+        }
 
-<link rel="stylesheet" type="text/css" href="style/styles.css" media="screen" />
-<link rel="icon" type="image/png" href="/images/icone.png"/>
+        // that's it for the headers
+        echoClose('</head>');
+        
+        // open body
+        if ($page && $page->hasBodyOnLoad())
+        {
+            echoOpen('<body onload="'.$page->echoBodyOnLoad().'">');
+        }
+        else
+        {
+            echoOpen('<body>');
+        }
 
-<?
-     if ( $this->minus )
-     {
-?>
-<!-- j3d -->
-<!--[if IE]><script type="text/javascript" src="js/excanvas.js"></script><![endif]-->
-<script type="text/javascript" src="js/j3d/trigo.js"></script>
-<script type="text/javascript" src="js/j3d/matrix.js"></script>
-<script type="text/javascript" src="js/j3d/vector.js"></script>
-<script type="text/javascript" src="js/j3d/light.js"></script>
-<script type="text/javascript" src="js/j3d/firebugx.js"></script>
-<script type="text/javascript" src="js/j3d/log.js"></script>
-<script type="text/javascript" src="js/j3d/model.js"></script>
-<script type="text/javascript" src="js/j3d/util.js"></script>
-<script type="text/javascript" src="js/j3d/sort.js"></script>
-<script type="text/javascript" src="js/j3d/clip.js"></script>
-<!-- minus -->
-<script type="text/javascript" src="js/minus/camera.js"></script>
-<script type="text/javascript" src="js/minus/input.js"></script>
-<script type="text/javascript" src="js/minus/mesh.js"></script>
-<script type="text/javascript" src="js/minus/element.js"></script>
-<script type="text/javascript" src="js/minus/cube.js"></script>
-<script type="text/javascript" src="js/minus/game.js"></script>
-<script type="text/javascript" src="js/minus/main.js"></script>
-<?
-     }
-?>
-</head>
-
-<?
-     if ( $this->minus )
-     {
-         echo ( '<body onload="main_init();">' . "\n" );
-     }
-     else
-     {
-         echo ( "<body>\n" );
-     }
-?>
-<div id="container">
-<?php
-	} // end begin()
+        // open container div
+        echoOpen('<div id="container">');
+	}
 
 	public function end()
 	{
-?>
-</div>
-</body>
+        // close everything
+        echoClose('</div>');
+        echoClose('</body>');
+        echoClose('</html>');
+	}
 
-</html>
-<?php
-	} // end end()
-
-} // end XhtmlCode
+} // XhtmlCode
 
 ?>

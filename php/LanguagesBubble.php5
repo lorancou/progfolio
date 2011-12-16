@@ -21,39 +21,30 @@ class LanguagesBubble implements IDisplayableContent
     // TODO: ease use of other languages
     public function display()
     {
-        $div = new Division( "languages" );
-        $div->begin();
-
+        // build list, default to the current language
         $languages = array();
         if (Progfolio::instance()->language == Progfolio::FRENCH)
         {
-            $languages["fr"] = "Français";
-            $languages["en"] = "English";
-            $languages["auto"] = "Auto";
+            $languages[Progfolio::FRENCH] = "Français";
+            $languages[Progfolio::ENGLISH] = "English";
+            $languages[Progfolio::AUTO] = "Auto";
         }
         else
         {
-            $languages["en"] = "English";
-            $languages["fr"] = "Français";
-            $languages["auto"] = "Auto";
+            $languages[Progfolio::ENGLISH] = "English";
+            $languages[Progfolio::FRENCH] = "Français";
+            $languages[Progfolio::AUTO] = "Auto";
         }
 
+        $div = new Division("languages");
+        $div->begin();
+
+        // selection form
         $form = new Form("langform", " ");
         $form->begin();
-        if (Progfolio::instance()->language == Progfolio::FRENCH)
-        {
-?>
-<label for="lang"><img src="images/languageicon.png" alt="Changer la langue"/></label>
-<?
-        }
-        else
-        {
-?>
-<label for="lang"><img src="images/languageicon.png" alt="Change language"/></label>
-<?
-        }
-        $form->selection(LANG,$languages, true);
-        $form->noScriptSubmit("apply",APPLY);
+        $label = '<img src="images/languageicon.png" alt="'.CHANGE_LANGUAGE.'"/>';
+        $form->selection($label, LANGUAGE, $languages, true);
+        $form->noScriptSubmit("apply", APPLY);
         $form->end();
 
         $div->end();

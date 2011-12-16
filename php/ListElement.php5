@@ -23,14 +23,19 @@ class ListElement implements IDisplayableContainer
 
     public function begin()
     {
-        echo "<li";
-        if ($this->type!=NULL) echo " class=\"$this->type\"";
-        echo ">\n";
+        if ($this->type!=NULL)
+        {
+            echoOpen('<li class="'.$this->type.'">');
+        }
+        else
+        {
+            echoOpen('<li>');
+        }
 	}   
 
     public function end()
     {
-        echo "</li>\n";
+        echoClose('</li>');
 	}   
 	
 }

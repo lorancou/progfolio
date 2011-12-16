@@ -82,9 +82,9 @@ class Progfolio
         }
 
         // set new session language
-        if (isset($_POST[LANG]))
+        if (isset($_POST[LANGUAGE]))
         {
-            if ($_POST[LANG] ==AUTO)
+            if ($_POST[LANGUAGE] == AUTO)
             {
                 if ( isset( $_SESSION[LANGUAGE] ) )
                 {
@@ -93,7 +93,7 @@ class Progfolio
             }
             else
             {
-                $_SESSION[LANGUAGE] = $_POST[LANG] ;
+                $_SESSION[LANGUAGE] = $_POST[LANGUAGE] ;
             }
         }
 

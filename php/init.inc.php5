@@ -44,4 +44,44 @@ function createThumbnail($dir,$name)
 	imagepng($img, $dir . '/.' . $name);
 }
 
+$echoIndent = 0;
+function echoOpen($str)
+{
+    global $echoIndent;
+    for ($i = 0; $i<$echoIndent; ++$i)
+    {
+        echo '    ';
+    }
+    ++$echoIndent;
+    echo $str . PHP_EOL;
+}
+function echoFlat($str)
+{
+    global $echoIndent;
+    for ($i = 0; $i<$echoIndent; ++$i)
+    {
+        echo '    ';
+    }
+    echo $str . PHP_EOL;
+}
+function echoClose($str)
+{
+    global $echoIndent;
+    --$echoIndent;
+    for ($i = 0; $i<$echoIndent; ++$i)
+    {
+        echo '    ';
+    }
+    echo $str . PHP_EOL;
+}
+function echoComment($str)
+{
+    global $echoIndent;
+    for ($i = 0; $i<$echoIndent; ++$i)
+    {
+        echo '    ';
+    }
+    echo '<!-- '.$str.' --!>' . PHP_EOL;
+}
+
 ?>

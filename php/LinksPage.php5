@@ -36,8 +36,8 @@ class LinksPage extends Page
         {
             $data = DatabaseConnection::instance()->data();
 
-            $par = new ContainerParagraph(NULL);
-            $par->begin();
+            $div = new Division();
+            $div->begin();
 
             $li = new ListElement("menu");
             $li->begin();
@@ -47,7 +47,7 @@ class LinksPage extends Page
 
             $li->end();
 
-            $par->end();
+            $div->end();
         }
     }
 }

@@ -1,4 +1,4 @@
-/***** Mise en page ********************************/
+/***** Page setup **************************************************************/
 
 body{
     margin: 0;
@@ -21,8 +21,6 @@ div#container{
 
 div#header{
     width: 100%;
-    /*border-bottom: solid 1px #cecece;
-    margin-bottom: 1em;*/
 }
 
 div#message{
@@ -61,6 +59,11 @@ div#footer{
     /*border-top: solid 1px #cecece;*/
 }
 
+div.default{
+    margin: 0.3em 0 0.3em 0;
+    padding: 0;
+}
+
 div.admin{
     float: right;
     text-align: right;
@@ -74,15 +77,11 @@ div.languages{
 }
 
 div.section{
-    /*padding-top: 0.5em;*/
-    /*border-top: solid 1px #666666;*/
     padding-left: 0.5em;
-    /*border-left: solid 1px #666666;*/
     margin-bottom: 1em;
 }
 
 div.section img{
-    /*border: 1px solid #666666;*/
 }
 
 div.footer{
@@ -98,7 +97,7 @@ div.rfooter{
     text-align: right;
 }
 
-/***** Curriculum Vitae ****************************/
+/***** Curriculum Vitae ********************************************************/
 
 div.event{
     width: 100%;
@@ -113,7 +112,7 @@ div.event p{
     margin-left: 25%;
 }
 
-/***** Menu ****************************************/
+/***** Menu ********************************************************************/
 
 ul.menu0{
     margin: 0 0 0 0;
@@ -130,7 +129,7 @@ li.menu{
     margin: 0.4em 0 0 0;
 }
 
-/***** Projets *************************************/
+/***** Projects ****************************************************************/
 
 div.images{
     margin-bottom: 0.5em;
@@ -140,7 +139,7 @@ div.files{
     margin-bottom: 0.5em;
 }
 
-/***** Titres **************************************/
+/***** Titles ******************************************************************/
 
 h1{
     margin: 0.5em 0 0 0;
@@ -166,7 +165,7 @@ h4{
     margin: 1em 0em 0.5em 0;
 }
 
-/***** Paragraphes *********************************/
+/***** Paragraphs **************************************************************/
 
 p{
     margin: 0.3em 0 0.3em 0;
@@ -198,7 +197,7 @@ p.deco_welcome img{
     vertical-align: text-bottom;
 }
 
-/***** Listes **************************************/
+/***** Lists *******************************************************************/
 
 ul{
     list-style-type: circle;
@@ -211,7 +210,7 @@ li{
     padding: 0;
 }
 
-/***** Formulaires *********************************/
+/***** Forms *******************************************************************/
 
 form{
     margin: 0.5em 0 0 0;
@@ -226,7 +225,7 @@ label{
     text-align: right;
 }
 
-p.confirm{
+div.confirm{
     text-align: right;
 }
 
@@ -235,7 +234,7 @@ textarea {
     height: 20em;
 }
 
-/***** Liens ***************************************/
+/***** Links *******************************************************************/
 
 a:link{
     color: #888888;
@@ -261,7 +260,7 @@ a.command{
     cursor: pointer;
 }
 
-/***** Images */
+/***** Images ******************************************************************/
 
 div#content img{
     border-width: 0;
@@ -278,12 +277,13 @@ img.logo{
 }
 
 img{
+    border: 0px;
     vertical-align: bottom;
     margin: 0;
     padding: 0;
 }
 
-/***** Horizontal rules */
+/***** Horizontal rules ********************************************************/
 
 div.hr {
   height: 20px;

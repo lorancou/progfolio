@@ -20,22 +20,22 @@
           
           echo ( '<div><canvas id="main" width="120" height="120"></canvas></div>' );
 
-          $div = new UniqueDivision( "test", "command" );
-          $div->begin();
+          $commandDiv = new UniqueDivision( "test", "command" );
+          $commandDiv->begin();
 
           echo ( '<a class="command" onclick="minus_input_scramble();">' . MINUS_SCRAMBLE . '</a>' );
           echo ( ' ' . MINUS_OR . ' ' );
           echo ( '<a class="command" onclick="minus_input_solve();">' . MINUS_SOLVE . '</a>' );
 
-          $div->end();
+          $commandDiv->end();
 
-          $par = new ContainerParagraph( NULL );
-          $par->begin();
+          $linkDiv = new Division();
+          $linkDiv->begin();
           $logo = new Logo( Logo::INFO, "?page=project&id-unix=minus" );
           $logo->display();
           $link = new Link( KNOW_MORE, "?page=project&id-unix=minus" );
           $link->display();
-          $par->end();
+          $linkDiv->end();
           
           $div->end();
       }

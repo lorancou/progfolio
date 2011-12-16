@@ -23,9 +23,6 @@ class MenuBlock extends Block
             "*",
             "item_order");
 
-        $title = new Title( 2, MENU );
-        //$title->display();
-
         $this->displayItems();
     }
 
@@ -35,8 +32,8 @@ class MenuBlock extends Block
         {
             $data = DatabaseConnection::instance()->data();
 
-            $par = new ContainerParagraph(NULL);
-            $par->begin();
+            $div = new Division();
+            $div->begin();
 
             $li = new ListElement("menu");
             $li->begin();
@@ -46,7 +43,7 @@ class MenuBlock extends Block
 
             $li->end();
 
-            $par->end();
+            $div->end();
         }
     }
 }

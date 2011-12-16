@@ -152,23 +152,22 @@ class Project extends Element
         $title = new Title(2,$this->name.($this->uv?" ($this->uv : $this->title)":""));
         $title->display();
 
-        $par = new Paragraph(NULL,
-                              $this->formatDate($this->date_begin)." - ".$this->formatDate($this->date_end));
+        $par = new Paragraph(NULL,$this->formatDate($this->date_begin)." - ".$this->formatDate($this->date_end));
         $par->display();
 
         if ($this->url)
         {
-            $par = new ContainerParagraph(NULL);
-            $par->begin();
+            $div = new Division();
+            $div->begin();
             $link = new Link($this->url,$this->url);
             $link->display();
-            $par->end();
+            $div->end();
         }
 
-        $desc = new Paragraph(NULL,$this->description);
+        $desc = new WikiDiv($this->description);
         $desc->display();
 
-        $body = new Paragraph(NULL,$this->body);
+        $body = new WikiDiv($this->body);
         $body->display();
 
 
@@ -205,51 +204,50 @@ class Project extends Element
         $title = new Title(3,$this->name.($this->uv?" ($this->uv : $this->title)":""));
         $title->display();
 
-        $par = new Paragraph(NULL,
-                              $this->formatDate($this->date_begin)." - ".$this->formatDate($this->date_end));
+        $par = new Paragraph(NULL, $this->formatDate($this->date_begin)." - ".$this->formatDate($this->date_end));
         $par->display();
 
         if ($this->url)
         {
-            $par = new ContainerParagraph(NULL);
-            $par->begin();
+            $urlDiv = new Division();
+            $urlDiv->begin();
             $link = new Link($this->url,$this->url);
             $link->display();
-            $par->end();
+            $urlDiv->end();
         }
 
-        $desc = new Paragraph(NULL,$this->description);
+        $desc = new WikiDiv($this->description);
         $desc->display();
 
         $images = $this->retrieveImages();
         if (count($images) != 0)
         {
-            $div = new Division("images");
-            $div->begin();
+            $imagesDiv = new Division("images");
+            $imagesDiv->begin();
             foreach ($images as $image)
                 $image->thumbnail();
-            $div->end();
+            $imagesDiv->end();
         }
 
         $files = $this->retrieveFiles();
         if (count($files) != 0)
         {
-            $div = new Division("files");
-            $div->begin();
+            $filesDiv = new Division("files");
+            $filesDiv->begin();
             foreach ($files as $file)
                 $file->thumbnail();
-            $div->end();
+            $filesDiv->end();
         }
 
         if ($this->body)
         {
-            $par = new ContainerParagraph(NULL);
-            $par->begin();
+            $knowMoreDiv = new Division();
+            $knowMoreDiv->begin();
             $logo = new Logo(Logo::INFO,"?page=project&id-unix=$this->id");
             $logo->display();
             $link = new Link( KNOW_MORE, "?page=project&id-unix=$this->id" );
             $link->display();
-            $par->end();
+            $knowMoreDiv->end();
         }
 
         $div->end();
@@ -320,7 +318,7 @@ class Project extends Element
         $aimage->begin();
         $aimage->hidden(ACTION,ADD_IMAGE_ACTION);
         $aimage->hidden("project_".ID,$this->id);
-        $aimage->selection("image_".ID,$liste,$liste);
+        $aimage->selection("Image","image_".ID,$liste,$liste);
         $aimage->confirm("confirm","Add");
         $aimage->end();
 
@@ -352,7 +350,7 @@ class Project extends Element
         $afile->begin();
         $afile->hidden(ACTION,ADD_FILE_ACTION);
         $afile->hidden("project_".ID,$this->id);
-        $afile->selection("file_".ID,$liste,$liste);
+        $afile->selection("File","file_".ID,$liste,$liste);
         $afile->confirm("confirm","Add");
         $afile->end();
 

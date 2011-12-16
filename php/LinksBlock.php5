@@ -23,13 +23,13 @@ class LinksBlock extends Block
 	   while($record=$connection->next())
 	   {
            $data = $connection->data();
-           $par = new ContainerParagraph(NULL);
-           $par->begin();
+           $div = new Division();
+           $div->begin();
            $logo = new Logo(Logo::INFO,"?page=link&id-unix=".$data["id-unix"]);
            $logo->display();
            $link = new Link($data["name"],$data["url"]);
            $link->display();
-           $par->end();
+           $div->end();
        }
    }
    

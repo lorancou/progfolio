@@ -15,24 +15,27 @@ class Division implements IDisplayableContainer
 {
 
     protected $type;
-    //protected $title;
 
-    public function __construct($type)
+    public function __construct($type = NULL)
     {
-        $this->type = $type;
-        //if (is_string($title) && $title!="")
-        //   $this->title = new Title(3,$title);
+        if (empty($type))
+        {
+            $this->type = "default";
+        }
+        else
+        {
+            $this->type = $type;
+        }
     }
 
     public function begin()
     {
-        echo "<div class=\"$this->type\">\n";
-        //echo $this->title?$this->title->display():"";
+        echoOpen('<div class="'.$this->type.'">');
     }
 
     public function end()
     {
-        echo "</div>\n";
+        echoClose('</div>');
     }
 
 }

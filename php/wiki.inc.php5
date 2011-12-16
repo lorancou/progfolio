@@ -300,9 +300,9 @@ class WikiParser extends parseWiki{
 		else	$parse="parseInline";
 		switch($name){
 		case "hrclear":
-			return "<hr class=\"clear\" />\n";
+			return "<hr class=\"clear\" />";
 		case "hr":
-			return "<hr />\n";
+			return "<hr />";
 		case "title":
 		case "title2":
 			$count=count($lines);
@@ -312,7 +312,7 @@ class WikiParser extends parseWiki{
 				if($name=="title2") $level+=3;
 				if($level>6 || $level<1) return "";
 				$content=$this->$parse($lines[$i]);
-				$return.= "<h$level>$content</h$level>\n";
+				$return.= "<h$level>$content</h$level>";
 			}
 			return $return;
 		case "list":
@@ -320,14 +320,14 @@ class WikiParser extends parseWiki{
 		case "ul":
 		case "ol":
 			$return='';
-			if($misc['prevtype']!=$name)	$return.="<$name>\n";
-			$return.="\t<li>".$this->$parse(join("\n", $lines))."</li><!--$name-->\n";
-			if($misc['nexttype']!=$name)	$return.="</$name>\n";
-			return $return;//."<pre>\n".join("\n", $lines)."\n</pre>";
+			if($misc['prevtype']!=$name)	$return.="<$name>";
+			$return.="\t<li>".$this->$parse(join("\n", $lines))."</li><!--$name-->";
+			if($misc['nexttype']!=$name)	$return.="</$name>";
+			return $return;
 		case "code":
-			return "<pre>".$this->$parse(join("\n", $lines))."</pre>\n";
+			return "<pre>".$this->$parse(join("\n", $lines))."</pre>";
 		case "p":
-			return "<p>".str_replace("\n", "\n<br />", $this->$parse(join("\n", $lines)))."</p>\n";
+			return "<p>".str_replace("\n", "<br />", $this->$parse(join("\n", $lines)))."</p>";
 		default:
 		}
 	}

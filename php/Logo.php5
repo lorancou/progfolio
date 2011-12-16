@@ -33,11 +33,13 @@ class Logo implements IDisplayableContent
 	public function display()
 	{
 		if ($this->link != NULL)
-			echo "<a href=$this->link>"; 
-		echo "<img src=$this->image alt=\"\" class=\"logo\" />";
-		if ($this->link != NULL)
-			echo "</a>";
-		echo "\n";
+        {
+            echoFlat('<a href="'.$this->link.'"><img src="'.$this->image.'" alt="" class="logo" /></a>');
+        }
+        else
+        {
+            echoFlat('<img src="'.$this->image.'" alt="" class="logo" />');
+        }
 	}
 
 }

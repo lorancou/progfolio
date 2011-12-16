@@ -16,7 +16,7 @@ class UniqueDivision extends Division
 
 	protected $id;
 	
-	public function __construct($type,$id)
+	public function __construct($type, $id)
     {
         parent::__construct($type);
         $this->id = $id;
@@ -24,7 +24,7 @@ class UniqueDivision extends Division
 
 	public function begin()
 	{
-        echo "<div id=\"$this->id\" class=\"$this->type\">\n";
+        echoOpen('<div id="'.$this->id.'" class="'.$this->type.'">');
 	}
 	
 }

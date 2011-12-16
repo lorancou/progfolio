@@ -15,10 +15,10 @@ abstract class Block
 {
    public final function display()
    {
-   	$div = new Division("block");
-   	$div->begin();
-      $this->displayBlock();
-      $div->end();
+       $div = new Division("block");
+       $div->begin();
+       $this->displayBlock();
+       $div->end();
    }
 
    protected abstract function displayBlock();   

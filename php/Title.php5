@@ -13,30 +13,30 @@
 
 class Title implements IDisplayableContent
 {
-	protected $level;
-	protected $title;
-	
-	public function __construct($level,$title)
-	{
-		if (is_int($level) && $level>0 && $level<10)
-			$this->level = $level;
-		else
-		{
-			$this->level=1;
+    protected $level;
+    protected $title;
+
+    public function __construct($level, $title)
+    {
+        if (is_int($level) && $level>0 && $level<10)
+        {
+            $this->level = $level;
+        }
+        else
+        {
+            $this->level=1;
             MessageStack::instance()->add(
                 Message.warning,get_class(),
                 "Bad level: ".$level.", using 1");
-  		}			
-		$this->title = $title;
+        }
+        $this->title = $title;
     }
-   
+
     public function display()
     {
-        echo "<h$this->level>";
-        echo WikiParser::instance()->parse($this->title); // parser here
-        echo "</h$this->level>\n";
-	}   
-	
+        echoFlat('<h'.$this->level.'>'.$this->title.'</h'.$this->level.'>');
+    }
+
 }
 
 ?>

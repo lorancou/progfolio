@@ -16,102 +16,98 @@ class Form implements IDisplayableContainer
 
 	private $code;
 	private $action;
-	//private $fields = array();
 
 	public function __construct($code,$action=NULL)
 	{
-		//$this->action = $action;
 		$this->code = $code;
-		$this->action = $action;
+        $this->action = @$action or '?page='.$code; // TODO: find out if this is still useful
 	}
 	
 	public function begin()
 	{
-		echo "<form ";
-		echo "enctype=\"multipart/form-data\" ";
-		echo "name=\"form\" ";
-		echo "method=\"POST\" ";
-		if ($this->action == NULL)
-			echo "action=\"?page=$this->code\">\n";
-		else
-			echo "action=\"$this->action\">\n";		
-		echo "<input type=\"hidden\" name=\"".ELEMENT."\" value=\"$this->code\" />\n";
+        echoOpen('<form enctype="multipart/form-data" name="form" method="POST" action="'.$this->action.'">');
+		echoFlat('<input type="hidden" name="'.ELEMENT.'" value="'.$this->code.'" />');
 	}
 	
 	public function hidden($name,$value)
 	{
-		echo "<input type=\"hidden\" name=\"$name\" value=\"$value\" />\n";
+		echoFlat('<input type="hidden" name="$name" value="$value" />');
 	}
 	
 	public function shortText($label,$field,$value="")
 	{
-		$par = new ContainerParagraph("entree");
-		$par->begin();
-		echo "<label for=\"$field\">$label&nbsp;:&nbsp;</label>\n";
-		echo "<input type=\"text\" name=\"$field\" id=\"$field\" value=\"$value\" />\n";
-		$par->end();
+		$div = new Division("entree");
+		$div->begin();
+		echoFlat('<label for="'.$field.'">'.$label.'</label>');
+		echoFlat('<input type="text" name="'.$field.'" id="'.$field.'" value="'.$value.'" />');
+		$div->end();
 	}
 	
 	public function longText($label,$field,$value)
 	{
-		$par = new ContainerParagraph("entree");
-		$par->begin();
-		echo "<label for=\"$field\">$label&nbsp;:&nbsp;</label>\n";
-		echo "<textarea name=\"$field\" id=\"$field\">$value</textarea>\n";
-		$par->end();
+		$div = new Division("entree");
+		$div->begin();
+		echoFlat('<label for="'.$field.'">'.$label.'</label>');
+		echoFlat('<textarea name="'.$field.'" id="'.$field.'">'.$value.'</textarea>');
+		$div->end();
 	}
 	
-	public function selection($name,$liste,$autosubmit=false) // liste : $value => $label
+	public function selection($label,$name,$list,$autosubmit=false) // liste : $value => $label
 	{
+		echoFlat('<label for="'.$name.'">'.$label.'</label>');
         if ($autosubmit)
         {
-            echo "<select name=\"$name\" onchange=\"this.form.submit()\">\n"; 
+            echoOpen('<select name="'.$name.'" onchange="this.form.submit()">'); 
         }
         else
         {
-            echo "<select name=\"$name\">\n";
+            echoOpen('<select name="$name">');
         }
-		foreach ($liste as $value => $label)
-			echo "<option value=\"$value\">$label</option>\n";	
-		echo "</select>\n";
+		foreach ($list as $value => $label)
+        {
+			echoFlat('<option value="'.$value.'">'.$label.'</option>');
+        }
+		echoClose("</select>");
 	}
 
 	public function password($label,$field,$value="")
 	{
-		$par = new ContainerParagraph("entree");
-		$par->begin();
-		echo "<label for=\"$field\">$label&nbsp;:&nbsp;</label>\n";
-		echo "<input type=\"password\" name=\"$field\" id=\"$field\" value=\"$value\" />\n";
-		$par->end();
+		$div = new Division("entree");
+		$div->begin();
+		echoFlat('<label for="'.$field.'">'.$label.'</label>');
+		echoFlat('<input type="password" name="'.$field.'" id="'.$field.'" value="'.$value.'" />');
+		$div->end();
 	}
 	
+    // TODO label first
 	public function confirm($action,$label)
 	{
-		//echo "<input type=\"hidden\" name=\"".ACTION."\" value=\"$action\" />\n";
-		$par = new ContainerParagraph("confirm");
-		$par->begin();
-		echo "<input name=\"$action\" type=\"submit\" value=\"$label\" />\n";
-		$par->end();
+		$div = new Division("confirm");
+		$div->begin();
+		echoFlat('<input name="'.$action.'" type="submit" value="'.$label.'" />');
+		$div->end();
 	}
 	
+    // TODO label first
 	public function noScriptSubmit($action,$label)
 	{
-		echo "<noscript><input name=\"$action\" type=\"submit\" value=\"$label\" /></noscript>\n";
+		echoFlat('<noscript><input name="'.$action.'" type="submit" value="'.$label.'" /></noscript>');
 	}
 
+    // TODO label first
 	public function file($type,$label)
 	{
-		$par = new ContainerParagraph("file");
-		$par->begin();
-		echo "<input name=\"file\" type=\"hidden\" value=\"$type\" />\n";
-		echo "<label for=\"$type\">$label&nbsp;:&nbsp;</label>\n";
-		echo "<input name=\"$type\" type=\"file\" />\n";
-		$par->end();
-	}
+		$div = new Division("file");
+		$div->begin();
+		echoFlat('<input name="file" type="hidden" value="'.$type.'" />');
+		echoFlat('<label for="'.$type.'">'.$label.'</label>');
+		echoFlat('<input name="'.$type.'" type="file" />');
+		$div->end();
+    }
 	
 	public function end()
 	{
-		echo "</form>\n";
+		echoClose("</form>");
 	}
 
 }

@@ -19,9 +19,11 @@ define("MENU", "Menu");
 define("LINKS", "Links");
 define("WEATHER", "À Charleroi...");
 define("FOOTER", '2005-2011 | Tous droits réservés');
-define("MAINTENANCE_IN_PROGRESS", 'Maintenance en cours...');
+define("MAINTENANCE_IN_PROGRESS", 'Maintenance en cours... Merci de revenir dans un instant.');
 
 define("BROWSER_LANGUAGE", "Utiliser la language du navigateur");
+define("CHANGE_LANGUAGE", "Changer la langue");
+
 define("KNOW_MORE", "En savoir plus ?");
 
 define("NOW", "maintenant");

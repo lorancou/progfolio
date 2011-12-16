@@ -19,9 +19,11 @@ define("MENU", "Menu");
 define("LINKS", "Links");
 define("WEATHER", "In Charleroi...");
 define("FOOTER", 'Copyright © 2005-2011 Laurent Couvidou');
-define("MAINTENANCE_IN_PROGRESS", 'Maintenance in progress...');
+define("MAINTENANCE_IN_PROGRESS", 'Maintenance in progress... Please come back in a moment.');
 
 define("BROWSER_LANGUAGE", "Use browser language");
+define("CHANGE_LANGUAGE", "Change language");
+
 define("KNOW_MORE", "Want to know more?");
 
 define("NOW", "now");

@@ -33,7 +33,7 @@ class Article extends Element
         $title = new Title(2,$this->name);
         $title->display();
 
-        $body = new Paragraph(NULL,$this->body);
+        $body = new WikiDiv($this->body);
         $body->display();
     }
 

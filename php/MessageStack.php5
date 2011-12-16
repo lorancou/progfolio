@@ -22,13 +22,15 @@ class MessageStack
     public static function instance() 
     { 
         if (!isset(self::$instance))
-            self::$instance = new MessageStack(NULL); 
-        return self::$instance; 
+        {
+            self::$instance = new MessageStack(); 
+        }
+        return self::$instance;
     }   
 
-    public function add($type,$class,$texte)
+    public function add($type, $class, $texte)
     {
-        $this->stack[] = new Message($type,$class,$texte);
+        $this->stack[] = new Message($type, $class, $texte);
     }
    
     public function display()

@@ -14,30 +14,37 @@
 class MaintenanceLayout implements ILayout
 {
 
-    public function display() {
-
+    public function display()
+    {
         // begin XHTML code
         $xhtml = new XhtmlCode(false);
         $xhtml->begin();
         
+        // languages
+        $languages = new LanguagesBubble;
+        $languages->display();
+
         // header
-        $div = new UniqueDivision("test","header");
+        $div = new UniqueDivision("none", "header");
         $div->begin();
-        $title = new Title(1,HEADER);
-        $title->display();
+        $title1 = new Title(1, HEADER);
+        $title1->display();
+        $title2 = new Title(2, DESCRIPTION);
+        $title2->display();
         $div->end();
 
-        // little message
-        $div = new Division("default");
-        $div->begin();
-        $par = new Paragraph(1,MAINTENANCE_IN_PROGRESS);
-        $par->display();
-        $div->end();
+        // warn about maintenance
+        MessageStack::instance()->add(
+            Message::warning, NULL,
+            MAINTENANCE_IN_PROGRESS);
+
+        // messages
+        MessageStack::instance()->display();
 
         // footer
-        $div = new UniqueDivision('test','footer');
+        $div = new UniqueDivision("none", "footer");
         $div->begin();
-        $par = new Paragraph(1,FOOTER);
+        $par = new Paragraph(1, FOOTER);
         $par->display();
         $div->end();
 

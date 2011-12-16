@@ -7,3 +7,9 @@
 - Easy deployment script?
 - Remove the need for magic_quotes_gpc
 - Fix project/file binding deletion
+- HTTPs admin login
+- XHTML indentation safety check
+- Ease use of other languages
+- Get rid of defines, use global consts?
+- Form functions: label first
+- Find a way to output wiki stuff nicely in HTML (indentation, line breaks)

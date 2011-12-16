@@ -17,18 +17,23 @@ class Link implements IDisplayableContent
 	private $label;
 	private $url;
    
-   public final function __construct($label,$url,$title=NULL)
-   {
-   	$this->label = $label;
-   	$this->url = $url;
-   	$this->title = $title;
-   }
+    public final function __construct($label,$url,$title=NULL)
+    {
+        $this->label = $label;
+        $this->url = $url;
+        $this->title = $title;
+    }
    
-   public final function display()
-   {
-		echo "<a href=\"$this->url\"";
-		if ($this->title!=NULL) echo " title=\"$this->title\"";
-		echo ">$this->label</a>\n";
+    public final function display()
+    {
+		if ($this->title!=NULL)
+        {
+            echoFlat('<a href="'.$this->url.'" title="'.$this->title.'">'.$this->label.'</a>');
+        }
+        else
+        {
+            echoFlat('<a href="'.$this->url.'">'.$this->label.'</a>');
+        }
 	}
 	
 }
