@@ -17,7 +17,6 @@ define("KEYWORDS", "laurent, couvidou, lorancou, ingénieur, programmeur, logici
 define("APPLY", "Appliquer");
 define("MENU", "Menu");
 define("LINKS", "Links");
-define("WEATHER", "À Charleroi...");
 define("FOOTER", '2005-2011 | Tous droits réservés');
 define("MAINTENANCE_IN_PROGRESS", 'Maintenance en cours... Merci de revenir dans un instant.');
 
@@ -44,9 +43,6 @@ define("DECEMBER", "décembre");
 define("MINUS_SCRAMBLE", "Mélanger");
 define("MINUS_OR", "ou");
 define("MINUS_SOLVE", "résoudre");
-
-define("IF_NEEDED_AR", "Si besoin...");
-define("DOWNLOAD_AR", "... téléchargez Adobe Reader");
 
 define("SERVER_ICON_ONLINE", " en ligne");
 define("SERVER_ICON_OFFLINE", " hors ligne");

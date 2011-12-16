@@ -17,7 +17,6 @@ define("KEYWORDS", "laurent, couvidou, lorancou, engineer, programmer, software,
 define("APPLY", "Apply");
 define("MENU", "Menu");
 define("LINKS", "Links");
-define("WEATHER", "In Charleroi...");
 define("FOOTER", 'Copyright © 2005-2011 Laurent Couvidou');
 define("MAINTENANCE_IN_PROGRESS", 'Maintenance in progress... Please come back in a moment.');
 
@@ -44,9 +43,6 @@ define("DECEMBER", "december");
 define("MINUS_SCRAMBLE", "Scramble");
 define("MINUS_OR", "or");
 define("MINUS_SOLVE", "solve");
-
-define("IF_NEEDED_AR", "If needed...");
-define("DOWNLOAD_AR", "... get Adobe Reader");
 
 define("SERVER_ICON_ONLINE", " online");
 define("SERVER_ICON_OFFLINE", " offline");
