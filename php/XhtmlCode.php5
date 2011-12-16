@@ -41,18 +41,18 @@ class XhtmlCode implements IDisplayableContainer
         echoFlat('<link rel="icon" type="image/png" href="images/icon.png"/>');
 
         // some more header stuff on page demand
-        if ($page && $page->hasExtraHeader())
+        if ($this->page && $this->page->hasExtraHeaders())
         {
-            $page->echoExtraHeader();
+            $this->page->echoExtraHeaders();
         }
 
         // that's it for the headers
         echoClose('</head>');
         
         // open body
-        if ($page && $page->hasBodyOnLoad())
+        if ($this->page && $this->page->hasBodyOnLoad())
         {
-            echoOpen('<body onload="'.$page->echoBodyOnLoad().'">');
+            $this->page->echoBodyOnLoad();
         }
         else
         {

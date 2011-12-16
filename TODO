@@ -3,8 +3,6 @@
   TODO list
 ---------------------------------------------------------------------------------
 
-- Get rid of the MinusBlock and all the Minus hardcoded stuff somehow
-- Title, header, footer in config file
 - Remove references to "UVs" (UTBM legacy...)
 - Easy deployment script?
 - Remove the need for magic_quotes_gpc

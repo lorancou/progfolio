@@ -16,10 +16,10 @@ abstract class Page
 
 	abstract public function display();
     
-    public function hasXHTMLExtraHeader() { return FALSE; }
-    public function echoXHTMLExtraHeader() {}
-    public function hasXHTMLBodyOnLoad() { return FALSE; }
-    public function echoXHTMLBodyOnLoad() {}
+    public function hasExtraHeaders() { return FALSE; }
+    public function echoExtraHeaders() {}
+    public function hasBodyOnLoad() { return FALSE; }
+    public function echoBodyOnLoad() {}
 
 }
 

@@ -116,23 +116,29 @@ class Progfolio
         }
     }
     
-    public static function instance() {
-        if (!isset(self::$instance)) {
+    public static function instance()
+    {
+        if (!isset(self::$instance))
+        {
             self::$instance = new Progfolio();
         } 
         return self::$instance;
     }
         
-    public function display() {
-        if (isset($_GET[LAYOUT])) {
+    public function display()
+    {
+        if (isset($_GET[LAYOUT]))
+        {
             $layout=LayoutFactory::instance()->createLayout( $_GET[LAYOUT] );
             $layout->display();
-        }   	
-        else if (file_exists('maintenance')) {
+        }
+        else if (file_exists('maintenance'))
+        {
             $arr = new MaintenanceLayout();
             $arr->display();
         }
-        else {
+        else
+        {
             $arr = new ClassicLayout();
             $arr->display();
         }

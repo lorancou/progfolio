@@ -11,7 +11,7 @@
    * This program is free software - see README for details.
    */
 
-class SimplePage
+class SimplePage extends Page
 {
 
     protected $element;
