@@ -11,13 +11,9 @@
    * This program is free software - see README for details.
    */
 
-define("HEADER", "Laurent Couvidou");
-define("DESCRIPTION", "Ingénieur Logiciel");
-define("KEYWORDS", "laurent, couvidou, lorancou, ingénieur, programmeur, logiciel, jeu, jeux, vidéo, réalité, virtuelle");
 define("APPLY", "Appliquer");
 define("MENU", "Menu");
 define("LINKS", "Links");
-define("FOOTER", '2005-2011 | Tous droits réservés');
 define("MAINTENANCE_IN_PROGRESS", 'Maintenance en cours... Merci de revenir dans un instant.');
 
 define("BROWSER_LANGUAGE", "Utiliser la language du navigateur");
@@ -40,9 +36,9 @@ define("OCTOBER", "octobre");
 define("NOVEMBER", "novembre");
 define("DECEMBER", "décembre");
 
-define("MINUS_SCRAMBLE", "Mélanger");
-define("MINUS_OR", "ou");
-define("MINUS_SOLVE", "résoudre");
+//define("MINUS_SCRAMBLE", "Mélanger");
+//define("MINUS_OR", "ou");
+//define("MINUS_SOLVE", "résoudre");
 
 define("SERVER_ICON_ONLINE", " en ligne");
 define("SERVER_ICON_OFFLINE", " hors ligne");
