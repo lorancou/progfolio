@@ -11,8 +11,8 @@
    * This program is free software - see README for details.
    */
 
-define("HEADER", "My portfolio");
-define("DESCRIPTION", "Some description");
+define("HEADER", "Progfolio");
+define("DESCRIPTION", "The programmer's portfolio");
 define("KEYWORDS", "comma, separated, keywords");
 define("FOOTER", 'Footer, good for a copyright line');
 

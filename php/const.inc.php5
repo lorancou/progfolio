@@ -25,6 +25,7 @@ define("CONFIRM_MODE","confirm");
 define("DELETE_MODE","delete");
 define("PREVIEW_BUTTON","preview");
 define("CONFIRM_BUTTON","confirm");
+define("DEFAULT_PAGE","welcome");
 
 /* POST parameters */
 define("LANGUAGE","lang");
@@ -51,5 +52,6 @@ define("DELETE_ACTION","delete");
 define("LAYOUT","layout");
 define("CLASSIC_LAYOUT","classic");
 define("MAINTENANCE_LAYOUT","maintenance");
+define("DEFAULT_LAYOUT","classic");
 
 ?>

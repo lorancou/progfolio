@@ -83,5 +83,9 @@ function echoComment($str)
     }
     echo '<!-- '.$str.' --!>' . PHP_EOL;
 }
+function echoLine($str)
+{
+    echo $str . '<br />';
+}
 
 ?>

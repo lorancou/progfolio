@@ -11,8 +11,8 @@
    * This program is free software - see README for details.
    */
 
-define("HEADER", "Mon portfolio");
-define("DESCRIPTION", "Une description");
+define("HEADER", "Progfolio");
+define("DESCRIPTION", "Le portfolio du programmeur");
 define("KEYWORDS", "mots-clefs, séparés, par, des, virgules");
 define("FOOTER", 'Pied de page, bon pour une mention légale');
 

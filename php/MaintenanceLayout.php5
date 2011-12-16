@@ -17,7 +17,7 @@ class MaintenanceLayout implements ILayout
     public function display()
     {
         // begin XHTML code
-        $xhtml = new XhtmlCode(false);
+        $xhtml = new XhtmlCode();
         $xhtml->begin();
         
         // languages

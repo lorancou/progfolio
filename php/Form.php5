@@ -31,7 +31,7 @@ class Form implements IDisplayableContainer
 	
 	public function hidden($name,$value)
 	{
-		echoFlat('<input type="hidden" name="$name" value="$value" />');
+		echoFlat('<input type="hidden" name="'.$name.'" value="'.$value.'" />');
 	}
 	
 	public function shortText($label,$field,$value="")

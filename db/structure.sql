@@ -1,13 +1,19 @@
 -- phpMyAdmin SQL Dump
--- version 2.11.8.1deb5+lenny6
+-- version 3.3.7deb6
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 15, 2010 at 06:32 PM
+-- Generation Time: Dec 16, 2011 at 05:50 PM
 -- Server version: 5.0.51
--- PHP Version: 5.2.6-1+lenny9
+-- PHP Version: 5.3.3-7+squeeze3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `progfolio`
@@ -28,7 +34,14 @@ CREATE TABLE IF NOT EXISTS `article` (
   `article_body_en` text NOT NULL,
   PRIMARY KEY  (`article_id`),
   UNIQUE KEY `article_unix_id` (`article_id-unix`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=19 ;
+
+--
+-- Dumping data for table `article`
+--
+
+INSERT INTO `article` (`article_id`, `article_id-unix`, `article_name_fr`, `article_name_en`, `article_body_fr`, `article_body_en`) VALUES
+(18, 'welcome', 'Bienvenue !', 'Welcome!', 'Ceci est un progfolio vide. Visitez la page du projet pour plus de dÃ©tails: [[github.com/lorancou/progfolio]].', 'This is an empty progfolio. Check the project page for details: [[github.com/lorancou/progfolio]].');
 
 -- --------------------------------------------------------
 
@@ -45,6 +58,11 @@ CREATE TABLE IF NOT EXISTS `file` (
   PRIMARY KEY  (`file_id`),
   UNIQUE KEY `fichier_id-unix` (`file_id-unix`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=35 ;
+
+--
+-- Dumping data for table `file`
+--
+
 
 -- --------------------------------------------------------
 
@@ -63,6 +81,11 @@ CREATE TABLE IF NOT EXISTS `image` (
   PRIMARY KEY  (`image_id`),
   UNIQUE KEY `image_id-unix` (`image_id-unix`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=91 ;
+
+--
+-- Dumping data for table `image`
+--
+
 
 -- --------------------------------------------------------
 
@@ -83,6 +106,11 @@ CREATE TABLE IF NOT EXISTS `item` (
   PRIMARY KEY  (`item_id`),
   UNIQUE KEY `item_id-unix` (`item_id-unix`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
+
+--
+-- Dumping data for table `item`
+--
+
 
 -- --------------------------------------------------------
 
@@ -111,6 +139,11 @@ CREATE TABLE IF NOT EXISTS `project` (
   PRIMARY KEY  (`project_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=36 ;
 
+--
+-- Dumping data for table `project`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -124,6 +157,11 @@ CREATE TABLE IF NOT EXISTS `project-file` (
   PRIMARY KEY  (`project-file_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
 
+--
+-- Dumping data for table `project-file`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -136,6 +174,11 @@ CREATE TABLE IF NOT EXISTS `project-image` (
   `project-image_id-image` smallint(6) NOT NULL,
   PRIMARY KEY  (`project-image_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=84 ;
+
+--
+-- Dumping data for table `project-image`
+--
+
 
 -- --------------------------------------------------------
 
@@ -153,3 +196,8 @@ CREATE TABLE IF NOT EXISTS `typep` (
   PRIMARY KEY  (`typep_id`),
   UNIQUE KEY `projet-type_id-unix` (`typep_id-unix`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `typep`
+--
+

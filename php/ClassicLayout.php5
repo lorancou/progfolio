@@ -16,8 +16,7 @@ class ClassicLayout implements ILayout
 
     public function display()
     {      
-        $code = PageFactory::instance()->getCode($_GET["page"]);
-        $page = PageFactory::instance()->createPage($code);
+        $page = PageFactory::instance()->createPage($_GET["page"]); // TODO: check if this is safe
 
         // begin XHTML code
         $xhtml = new XhtmlCode($page);

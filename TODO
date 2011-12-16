@@ -1,5 +1,7 @@
-                                   PROGFOLIO
-                                 The TODO List
+---------------------------------------------------------------------------------
+  PROGFOLIO
+  TODO list
+---------------------------------------------------------------------------------
 
 - Get rid of the MinusBlock and all the Minus hardcoded stuff somehow
 - Title, header, footer in config file

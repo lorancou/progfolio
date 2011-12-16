@@ -15,7 +15,7 @@ class XhtmlCode implements IDisplayableContainer
 {
 	protected $page;
    
-	public function __construct($page)
+	public function __construct($page=NULL)
     {
         $this->page = $page;
     }

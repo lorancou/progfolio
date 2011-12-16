@@ -1,7 +1,9 @@
-                                   PROGFOLIO
-                            A programmer's portfolio
+---------------------------------------------------------------------------------
+  PROGFOLIO
+  The programmer's portfolio
+---------------------------------------------------------------------------------
 
-Copyright (c) 2006-2010 Laurent Couvidou
+Copyright (c) 2006-2011 Laurent Couvidou
 http://lorancou.free.fr/index.php5?page=project&id-unix=progfolio
 Contact: lorancou@free.fr
 Formerly named "Page perso" for versions 0.1, 0.2 and 0.3
@@ -15,25 +17,37 @@ Full Operating system language detection (lang.inc.php5)
 Copyright (c) Techpatterns.com
 http://techpatterns.com/downloads/php_language_detection.php
 
-                                    Setup
+---------------------------------------------------------------------------------
+  SETUP
+---------------------------------------------------------------------------------
 
 Prerequisites:
 - Web server with PHP5 support
 - MySQL server (version >= 5.0)
 
-Copy the file php/config.inc.php5.template to php/config.inc.php5, and enter the
-connection info for your MySQL server in this new file. Make sure you also set
-proper permissions on this file so that nobody can read your plain text password.
-Then import db/structure.sql in your server's database (using phpmyadmin for
-instance). It's ready! Just open index.php5 in a browser. Contact me for
-troubleshooting.
+Rename the following files:
+- php/config.inc.php5.template -> php/config.inc.php5
+- php/config-en.inc.php5.template -> php/config-en.inc.php5
+- php/config-fr.inc.php5.template -> php/config-fr.inc.php5
 
-NB: this code relies on magic_quotes_gpc set to "On" in php.ini. It's now
-deprecated with PHP 5.3.0 and set to "Off" by default ; if your PHP version is that
-recent, make sure you set it back to "On" or you'll get trouble with single quotes,
+Enter the connection info for your MySQL server in the first one. Make sure you
+also set proper permissions on this file so that nobody can read your plain text
+password. Then import db/structure.sql in your server's database (using
+phpmyadmin for instance). It's ready! Just open index.php5 in a browser. Contact
+me for troubleshooting.
+
+---------------------------------------------------------------------------------
+  KNOWN ISSUES
+---------------------------------------------------------------------------------
+
+This code relies on magic_quotes_gpc set to "On" in php.ini. It's now deprecated
+with PHP 5.3.0 and set to "Off" by default ; if your PHP version is that recent,
+make sure you set it back to "On" or you'll get trouble with single quotes,
 backslashes and others.
 
-                                   LICENSE
+---------------------------------------------------------------------------------
+  LICENSE
+---------------------------------------------------------------------------------
 
 This program is free software: you can redistribute it and/or modify it under the
 terms of the GNU General Public License as published by the Free Software

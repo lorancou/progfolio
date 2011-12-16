@@ -15,28 +15,33 @@ class LayoutFactory
 {
 
     private $layouts = array (
-        CLASSIC_LAYOUT   => "ClassicLayout",
+        CLASSIC_LAYOUT => "ClassicLayout",
         MAINTENANCE_LAYOUT => "MaintenanceLayout",
         );
 
     // singleton
     private static $instance;
     private function __construct(){}
-    public static function instance() {
-        if (!isset(self::$instance)) {
+    public static function instance()
+    {
+        if (!isset(self::$instance))
+        {
             self::$instance = new LayoutFactory();
         }
         return self::$instance;
     }  
 
-    function createLayout($code) {
-        if(!isset($this->layouts[$code])) {
-            if ($layout!="") {
+    function createLayout($code)
+    {
+        if (!isset($this->layouts[$code]))
+        {
+            if (!empty($code))
+            {
                 MessageStack::instance()->add(
                     Message::warning,get_class(),
                     "The layout ".$code." doesn't exist");
             }
-            $code = DEFAULT_PAGE;
+            $code = DEFAULT_LAYOUT;
         }
         $layout = $this->layouts[$code];
         return new $layout;

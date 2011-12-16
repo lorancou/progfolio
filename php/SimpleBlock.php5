@@ -20,7 +20,6 @@ class SimpleBlock extends Block
 
     public function __construct($elementCode,$idElement,$mode)
     {
-
         $this->mode = $mode;
         $this->idElement = $idElement;
 
@@ -36,9 +35,9 @@ class SimpleBlock extends Block
 			{
 				MessageStack::instance()->add(
 					Message::error,get_class(),
-					"Aucun élément d'identifiant \"".$this->idElement."\".");
+					'No element with id "'.$this->idElement.'".');
 				$data[ID] = $idElement;
-				$this->mode = add; 
+				$this->mode = ADD_MODE;
 			}
 			else
 			{

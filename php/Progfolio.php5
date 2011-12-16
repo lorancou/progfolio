@@ -70,7 +70,8 @@ class Progfolio
             else
             {
                 // delay if preview
-                if (!isset($_POST[PREVIEW_MODE])){
+                if (!isset($_POST[PREVIEW_MODE]))
+                {
                     ElementFactory::instance()->manage($_POST);
                 }
             }

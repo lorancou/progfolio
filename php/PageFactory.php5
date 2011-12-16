@@ -33,28 +33,26 @@ class PageFactory
     private function __construct(){}
     public static function instance()
     {
-        if (!isset(self::$instance)) self::$instance = new PageFactory();
+        if (!isset(self::$instance))
+        {
+            self::$instance = new PageFactory();
+        }
         return self::$instance;
     }
 
-    function getCode($code)
+    function createPage($code)
     {
-        if(!isset($this->pages[$code]))
+        if (!isset($this->pages[$code]))
         {
-            if ($code!="")
+            if (!empty($code))
             {
                 MessageStack::instance()->add(
                     Message::warning,get_class(),
                     "The page ".$code." doesn't exist");
             }
             $code = DEFAULT_PAGE;
-        }
-        
-        return $code;
-    }
+        }        
 
-    function createPage($code)
-    {
         $page = $this->pages[$code];
 
         if (is_array($page)) // page with one element of given id
