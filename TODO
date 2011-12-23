@@ -14,3 +14,6 @@
 - Form functions: label first
 - Find a way to output wiki stuff nicely in HTML (indentation, line breaks)
 - Localized consts (HEADER, FOOTER, etc.) as db defaults?
+- Sort projects by *start* date??? (progfolio vs minuscube)
+- Fix addon eating welcome page on Iceweasel
+- Fix crappy font with IE9
