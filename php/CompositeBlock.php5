@@ -93,7 +93,7 @@ class CompositeBlock extends Block
             break;
         case "date":
             // can't really do that everywhere... need to normalize somehow?
-            $sort = $this->elementCode."_date_end";
+            $sort = $this->elementCode."_date_begin";
             break;
         case "weight":
             // TODO

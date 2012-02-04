@@ -152,7 +152,16 @@ class Project extends Element
         $title = new Title(2,$this->name.($this->uv?" ($this->uv : $this->title)":""));
         $title->display();
 
-        $par = new Paragraph(NULL,$this->formatDate($this->date_begin)." - ".$this->formatDate($this->date_end));
+        $dateBegin = $this->formatDate($this->date_begin);
+        $dateEnd = $this->formatDate($this->date_end);
+        if (0 != strcmp($dateBegin, $dateEnd))
+        {
+            $par = new Paragraph(NULL, $dateBegin . " - " . $dateEnd);
+        }
+        else
+        {
+            $par = new Paragraph(NULL, $dateBegin);
+        }
         $par->display();
 
         if ($this->url)
@@ -204,7 +213,16 @@ class Project extends Element
         $title = new Title(3,$this->name.($this->uv?" ($this->uv : $this->title)":""));
         $title->display();
 
-        $par = new Paragraph(NULL, $this->formatDate($this->date_begin)." - ".$this->formatDate($this->date_end));
+        $dateBegin = $this->formatDate($this->date_begin);
+        $dateEnd = $this->formatDate($this->date_end);
+        if (0 != strcmp($dateBegin, $dateEnd))
+        {
+            $par = new Paragraph(NULL, $dateBegin . " - " . $dateEnd);
+        }
+        else
+        {
+            $par = new Paragraph(NULL, $dateBegin);
+        }
         $par->display();
 
         if ($this->url)
