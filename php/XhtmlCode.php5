@@ -37,6 +37,7 @@ class XhtmlCode implements IDisplayableContainer
         echoFlat('<meta name="description" content="'.DESCRIPTION.'" />');
         echoFlat('<meta name="keywords" content="'.KEYWORDS.'" />');
         echoFlat('<meta name="robots" content="all"/>');
+        echoFlat('<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />');
         echoFlat('<link rel="stylesheet" type="text/css" href="style/styles.css" media="screen" />');
         echoFlat('<link rel="icon" type="image/png" href="images/icon.png"/>');
 
