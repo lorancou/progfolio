@@ -4,7 +4,6 @@
 ---------------------------------------------------------------------------------
 
 - Remove references to "UVs" (UTBM legacy...)
-- Easy deployment script?
 - Remove the need for magic_quotes_gpc
 - Fix project/file binding deletion
 - HTTPs admin login
@@ -15,4 +14,3 @@
 - Find a way to output wiki stuff nicely in HTML (indentation, line breaks)
 - Localized consts (HEADER, FOOTER, etc.) as db defaults?
 - Fix addon eating welcome page on Iceweasel
-- Fix crappy font with IE9
