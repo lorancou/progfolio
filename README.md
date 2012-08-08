@@ -1,25 +1,25 @@
----------------------------------------------------------------------------------
-  PROGFOLIO
-  The programmer's portfolio
----------------------------------------------------------------------------------
+Progfolio
+================================================================================
 
-Copyright (c) 2006-2012 Laurent Couvidou
-http://lorancou.free.fr/index.php5?page=project&id-unix=progfolio
-Contact: lorancou@free.fr
+The programmer's portfolio
+--------------------------------------------------------------------------------
+
+Copyright (c) 2006-2012 Laurent Couvidou  
+<http://lorancou.free.fr/index.php5?page=project&id-unix=progfolio>  
+Contact: <lorancou@free.fr>  
 Formerly named "Page perso" for versions 0.1, 0.2 and 0.3
 
-Wiki parser (wiki.inc.php5)
-Copyright (c) Mildred
-http://louve.dyndns.org/projets/wikiparser/index.html.fr
-http://mildred632.free.fr/projets/wikiparser/index.html.fr
+Wiki parser (wiki.inc.php5)  
+Copyright (c) Mildred  
+<http://louve.dyndns.org/projets/wikiparser/index.html.fr>  
+<http://mildred632.free.fr/projets/wikiparser/index.html.fr>
 
-Full Operating system language detection (lang.inc.php5)
-Copyright (c) Techpatterns.com
-http://techpatterns.com/downloads/php_language_detection.php
+Full Operating system language detection (lang.inc.php5)  
+Copyright (c) Techpatterns.com  
+<http://techpatterns.com/downloads/php_language_detection.php>
 
----------------------------------------------------------------------------------
-  SETUP
----------------------------------------------------------------------------------
+Setup
+--------------------------------------------------------------------------------
 
 Prerequisites:
 - Web server with PHP5 support
@@ -36,8 +36,7 @@ password. Then import db/structure.sql in your server's database (using
 phpmyadmin for instance). It's ready! Just open index.php5 in a browser. Contact
 me for troubleshooting.
 
----------------------------------------------------------------------------------
-  KNOWN ISSUES
+Known issues
 ---------------------------------------------------------------------------------
 
 This code relies on magic_quotes_gpc set to "On" in php.ini. It's now deprecated
@@ -45,8 +44,7 @@ with PHP 5.3.0 and set to "Off" by default ; if your PHP version is that recent,
 make sure you set it back to "On" or you'll get trouble with single quotes,
 backslashes and others.
 
----------------------------------------------------------------------------------
-  LICENSE
+License
 ---------------------------------------------------------------------------------
 
 This program is free software: you can redistribute it and/or modify it under the
