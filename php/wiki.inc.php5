@@ -216,7 +216,7 @@ class parseWiki{
 		return $result;
 	}
 	function arrayInline($str, $i=0, $self="arrayInline"){
-		return $this->arrayInline_2($str, &$i);
+		return $this->arrayInline_2($str, $i);
 	}
 	function arrayInline_2($str, &$i, $self="arrayInline_2"){
 		$max=strlen($str)-1;
