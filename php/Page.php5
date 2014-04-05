@@ -16,8 +16,16 @@ abstract class Page
 
 	abstract public function display();
     
-    public function hasExtraHeaders() { return FALSE; }
-    public function echoExtraHeaders() {}
+    public function hasExtraHeaders()
+    {
+        return (file_exists('addon/addon_extra_headers.php5'));
+    }
+
+    public function echoExtraHeaders()
+    {
+        require 'addon/addon_extra_headers.php5';
+    }
+
     public function hasBodyOnLoad() { return FALSE; }
     public function echoBodyOnLoad() {}
 

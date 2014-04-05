@@ -13,16 +13,6 @@
 
 class WelcomePage extends Page
 {
-    public function hasExtraHeaders()
-    {
-        return (file_exists('addon/addon_extra_headers.php5'));
-    }
-
-    public function echoExtraHeaders()
-    {
-        require 'addon/addon_extra_headers.php5';
-    }
-
     public function hasBodyOnLoad()
     {
         return (file_exists('addon/addon_body_on_load.php5'));
