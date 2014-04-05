@@ -287,7 +287,7 @@ img{
 
 div.hr {
   height: 20px;
-  background: #fff url('../images/hr.png') no-repeat scroll center;
+  background: #fff url('../res/hr.png') no-repeat scroll center;
 }
 
 div.hr hr {
