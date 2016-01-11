@@ -76,7 +76,7 @@ class Project extends Element
 
     private function getDatabaseId()
     {
-        $connection = DatabaseConnection::instance();
+        $connection = Database::instance();
         $connection->select("project",0,1,"`project_".ID."`='".$this->id."'","project_id");
         $connection->next();
         $data = $connection->data();
@@ -87,7 +87,7 @@ class Project extends Element
     {
         $images = array();
         $idBase = $this->getDatabaseId();
-        $connection = DatabaseConnection::instance();
+        $connection = Database::instance();
         $connection->select("project-image",NULL,NULL,"`project-image_id-project`='$idBase'","project-image_id-image","project-image_id-image");
         $idsImage = array();
         while ($connection->next())
@@ -111,7 +111,7 @@ class Project extends Element
     {
         $files = array();
         $idBase = $this->getDatabaseId();
-        $connection = DatabaseConnection::instance();
+        $connection = Database::instance();
         $connection->select("project-file",NULL,NULL,"`project-file_id-project`='$idBase'","project-file_id-file","project-file_id-file");
         $idsFile = array();
         while ($connection->next())
@@ -319,7 +319,7 @@ class Project extends Element
         $title = new Title(2,"Manage project: ".$this->id);
         $title->display();
 
-        $connection = DatabaseConnection::instance();
+        $connection = Database::instance();
 
         $title = new Title(3,"Images");
         $title->display();

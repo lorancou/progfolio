@@ -15,7 +15,7 @@ class MenuBlock extends Block
 {
     public final function displayBlock()
     {
-        DatabaseConnection::instance()->select(
+        Database::instance()->select(
             ITEM_ELEMENT,
             NULL,
             NULL,
@@ -28,9 +28,9 @@ class MenuBlock extends Block
 
     public final function displayItems()
     {
-        while ( $record=DatabaseConnection::instance()->next() )
+        while ( $record=Database::instance()->next() )
         {
-            $data = DatabaseConnection::instance()->data();
+            $data = Database::instance()->data();
 
             $div = new Division();
             $div->begin();

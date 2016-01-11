@@ -43,7 +43,7 @@ class CompositeBlock extends Block
     protected final function displayBlock()
     {
         $i = 0;
-        $connection = DatabaseConnection::instance();
+        $connection = Database::instance();
         $connection->select(
             $this->elementCode,
             $this->begin,
@@ -54,7 +54,7 @@ class CompositeBlock extends Block
             $this->order?$this->orderString():NULL);
         $request = $connection->request(); // croisements
         //$continue = TRUE;
-        while($line=mysql_fetch_assoc($request))
+        while($line=mysql_fetch_assoc($request)) // TODO to Database.php
         {
             if ( $i > 0 ) 
             {

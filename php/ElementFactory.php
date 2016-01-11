@@ -94,12 +94,12 @@ class ElementFactory
                 }
             }
             if ($add)
-                DatabaseConnection::instance()->add($infos[ELEMENT],$fields);
+                Database::instance()->add($infos[ELEMENT],$fields);
             break;
 			
         case ADD_IMAGE_ACTION:
             $fields = array();
-            $connection = DatabaseConnection::instance();
+            $connection = Database::instance();
             $connection->select("image",0,1,"`image_".ID."`='".$infos["image_".ID]."'","image_id");
             $connection->next();
             $data = $connection->data();
@@ -108,12 +108,12 @@ class ElementFactory
             $connection->next();
             $data = $connection->data();
             $fields["id-project"] = $data["id"];
-            DatabaseConnection::instance()->add("project-image",$fields);			
+            Database::instance()->add("project-image",$fields);			
             break;  	
 
         case ADD_FILE_ACTION:
             $fields = array();
-            $connection = DatabaseConnection::instance();
+            $connection = Database::instance();
             $connection->select("file",0,1,"`file_".ID."`='".$infos["file_".ID]."'","file_id");
             $connection->next();
             $data = $connection->data();
@@ -122,7 +122,7 @@ class ElementFactory
             $connection->next();
             $data = $connection->data();
             $fields["id-project"] = $data["id"];
-            DatabaseConnection::instance()->add("project-file",$fields);			
+            Database::instance()->add("project-file",$fields);			
             break;  	
    	
         case EDIT_ACTION:
@@ -130,7 +130,7 @@ class ElementFactory
             foreach($infos as $key => $value)
                 if ($key!=ACTION && $key!=ELEMENT && $key!=ID && $key!=CONFIRM_MODE)
                     $fields[$key] = $value;
-            DatabaseConnection::instance()->update($infos[ELEMENT],$infos[ID],$fields);
+            Database::instance()->update($infos[ELEMENT],$infos[ID],$fields);
             break;
    		
         case ACTION_PREVISUALISER:
@@ -139,7 +139,7 @@ class ElementFactory
    		
         case DELETE_ACTION:
             // TODO: fix file deletion
-            DatabaseConnection::instance()->delete($infos[ELEMENT],$infos[ID]);
+            Database::instance()->delete($infos[ELEMENT],$infos[ID]);
             break;
    		
         default:

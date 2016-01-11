@@ -29,7 +29,7 @@ class SimpleBlock extends Block
             $data = stripslashes_deep($_POST);
         else // hit the database
         {
-            $connection = DatabaseConnection::instance();
+            $connection = Database::instance();
 			$connection->select($elementCode,0,1,"`".$elementCode."_".ID."`='".$idElement."'");
 			if ($connection->count()==0) // no result
 			{

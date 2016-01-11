@@ -16,7 +16,7 @@ class LinksBlock extends Block
 
    public final function displayBlock()
    {
-       $connection = DatabaseConnection::instance();
+       $connection = Database::instance();
        $connection->select(LINK_ELEMENT,0,10,NULL,"*","link_order");
        $title = new Title(2,"Links");
        $title->display();

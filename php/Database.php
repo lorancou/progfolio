@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * DatabaseConnection.php
+   * Database.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio
@@ -11,7 +11,7 @@
    * This program is free software - see README for details.
    */
 
-class DatabaseConnection
+class Database
 {
 
     private $request;
@@ -34,7 +34,7 @@ class DatabaseConnection
     public static function instance() 
     { 
         if (!isset(self::$instance))
-            self::$instance = new DatabaseConnection(NULL); 
+            self::$instance = new Database(NULL); 
         return self::$instance; 
     }
 
