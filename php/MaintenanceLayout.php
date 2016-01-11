@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * MaintenanceLayout.php5
+   * MaintenanceLayout.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio

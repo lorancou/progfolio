@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * LanguagesBubble.php5
+   * LanguagesBubble.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio

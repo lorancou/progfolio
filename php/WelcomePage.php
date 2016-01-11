@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * WelcomePage.php5
+   * WelcomePage.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio
@@ -15,12 +15,12 @@ class WelcomePage extends Page
 {
     public function hasBodyOnLoad()
     {
-        return (file_exists('addon/addon_body_on_load.php5'));
+        return (file_exists('addon/addon_body_on_load.php'));
     }
 
     public function echoBodyOnLoad()
     {
-        require 'addon/addon_body_on_load.php5';
+        require 'addon/addon_body_on_load.php';
     }
 
 	public function display()
@@ -28,11 +28,11 @@ class WelcomePage extends Page
 		$block = new SimpleBlock(ARTICLE_ELEMENT,'welcome',DISPLAY_MODE);
 		$block->display();
 
-        if (file_exists('addon/addon.php5'))
+        if (file_exists('addon/addon.php'))
         {
             $div = new Division("addon");
             $div->begin();
-            require 'addon/addon.php5';
+            require 'addon/addon.php';
             $div->end();
         }
 	}

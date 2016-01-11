@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * IDisplayableContent.php5
+   * IDisplayableContent.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio

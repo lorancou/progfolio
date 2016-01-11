@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * ElementFactory.php5
+   * ElementFactory.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio

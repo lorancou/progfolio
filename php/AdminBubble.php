@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * AdminBubble.php5
+   * AdminBubble.php
    * ----------
    * 
    * Progfolio

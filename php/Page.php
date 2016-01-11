@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * Page.php5
+   * Page.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio
@@ -18,12 +18,12 @@ abstract class Page
     
     public function hasExtraHeaders()
     {
-        return (file_exists('addon/addon_extra_headers.php5'));
+        return (file_exists('addon/addon_extra_headers.php'));
     }
 
     public function echoExtraHeaders()
     {
-        require 'addon/addon_extra_headers.php5';
+        require 'addon/addon_extra_headers.php';
     }
 
     public function hasBodyOnLoad() { return FALSE; }

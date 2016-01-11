@@ -2,7 +2,7 @@
 session_start(); // shouldn't move! some web hosts don't like whitespaces before this
 
   /*
-   * init.inc.php5
+   * init.inc.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio
@@ -15,7 +15,7 @@ session_start(); // shouldn't move! some web hosts don't like whitespaces before
 
 // load classes code automatically
 function __autoload($class_name) {
-    require_once $class_name.'.php5';
+    require_once $class_name.'.php';
 }
 
 // the message stack stores all erros

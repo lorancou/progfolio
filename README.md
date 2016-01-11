@@ -5,16 +5,16 @@ The programmer's portfolio
 --------------------------------------------------------------------------------
 
 Copyright (c) 2006-2012 Laurent Couvidou  
-<http://lorancou.free.fr/index.php5?page=project&id-unix=progfolio>  
+<http://lorancou.free.fr/index.php?page=project&id-unix=progfolio>  
 Contact: <lorancou@free.fr>  
 Formerly named "Page perso" for versions 0.1, 0.2 and 0.3
 
-Wiki parser (wiki.inc.php5)  
+Wiki parser (wiki.inc.php)  
 Copyright (c) Mildred  
 <http://louve.dyndns.org/projets/wikiparser/index.html.fr>  
 <http://mildred632.free.fr/projets/wikiparser/index.html.fr>
 
-Full Operating system language detection (lang.inc.php5)  
+Full Operating system language detection (lang.inc.php)  
 Copyright (c) Techpatterns.com  
 <http://techpatterns.com/downloads/php_language_detection.php>
 
@@ -26,14 +26,14 @@ Prerequisites:
 - MySQL server (version >= 5.0)
 
 Rename the following files:
-- php/config.inc.php5.template -> php/config.inc.php5
-- php/config-en.inc.php5.template -> php/config-en.inc.php5
-- php/config-fr.inc.php5.template -> php/config-fr.inc.php5
+- php/config.inc.php.template -> php/config.inc.php
+- php/config-en.inc.php.template -> php/config-en.inc.php
+- php/config-fr.inc.php.template -> php/config-fr.inc.php
 
 Enter the connection info for your MySQL server in the first one. Make sure you
 also set proper permissions on this file so that nobody can read your plain text
 password. Then import db/structure.sql in your server's database (using
-phpmyadmin for instance). It's ready! Just open index.php5 in a browser. Contact
+phpmyadmin for instance). It's ready! Just open index.php in a browser. Contact
 me for troubleshooting.
 
 Known issues

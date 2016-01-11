@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * CompositeBlock.php5
+   * CompositeBlock.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio

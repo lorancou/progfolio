@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * DatabaseConnection.php5
+   * DatabaseConnection.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio
