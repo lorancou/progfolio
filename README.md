@@ -4,7 +4,7 @@ Progfolio
 The programmer's portfolio
 --------------------------------------------------------------------------------
 
-Copyright (c) 2006-2012 Laurent Couvidou  
+Copyright (c) 2006-2016 Laurent Couvidou  
 <http://lorancou.free.fr/index.php?page=project&id-unix=progfolio>  
 Contact: <lorancou@free.fr>  
 Formerly named "Page perso" for versions 0.1, 0.2 and 0.3
@@ -30,11 +30,11 @@ Rename the following files:
 - php/config-en.inc.php.template -> php/config-en.inc.php
 - php/config-fr.inc.php.template -> php/config-fr.inc.php
 
-Enter the connection info for your MySQL server in the first one. Make sure you
-also set proper permissions on this file so that nobody can read your plain text
-password. Then import db/structure.sql in your server's database (using
-phpmyadmin for instance). It's ready! Just open index.php in a browser. Contact
-me for troubleshooting.
+Enter the connection info for your database in the first one. Make sure you also
+set proper permissions on this file so that nobody can read your plain text
+password. Then import db/structure.sql in your database (using phpmyadmin for
+instance). It's ready! Just open index.php in a browser. Contact me for
+troubleshooting.
 
 Known issues
 ---------------------------------------------------------------------------------
