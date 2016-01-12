@@ -18,24 +18,25 @@ class Database
     private $table;
     private $line;
 
+    private $pdo;
+    private $statement;
+
     // singleton
     private static $instance;
-    private function __construct() // one connection only
-    {	
-        if (!$connection=mysql_connect(SERVER,LOGIN,PASSWORD))
-            MessageStack::instance()->add(
-                Message.error,get_class(),
-                "Can't connect connect to server ".SERVER);
-        else if (!$bdd=mysql_select_db(BASE,$connection))
-            MessageStack::instance()->add(
-                Message.error,get_class(),
-                "Can't select base ".BASE);
-    }
     public static function instance() 
     { 
         if (!isset(self::$instance))
             self::$instance = new Database(NULL); 
         return self::$instance; 
+    }
+
+    private function __construct() // one connection only
+    {
+        if ( !$this->pdo = new PDO( 'mysql:host='.DBHOST.';dbname='.DBNAME, DBUSER, DBPASSWD ) ) {
+            MessageStack::instance()->add( Message.error, get_class(), "Can't connect to database host ".DBHOST );
+        } else {
+            $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); // TODO if dev mode + don't log in the middle of HTML
+        }
     }
 
     // SELECT request
@@ -62,6 +63,9 @@ class Database
         $sql .= ";";
         //echo $sql.'<br/>';
         $this->execute($sql);
+
+        $res = $this->pdo->query('SELECT COUNT(*) FROM '.$table);
+        return $res->fetchColumn();
     }
 
     // INSERT request
@@ -104,18 +108,20 @@ class Database
     // execute request
     public function execute($sql)
     {
-        if (!$this->request=mysql_query($sql))
-            MessageStack::instance()->add(
-                Message.error,get_class(),
-                "Request failed: ".$sql);
+        // When query() fails, it does not return a PDOStatement object. It simply returns false.
+        if ( !$this->statement = $this->pdo->query($sql) ) {
+            MessageStack::instance()->add( Message.error, get_class(), "SQL query failed" );
+        }
     }
 
     // progress in selection
     public function next()
     {
-        $this->line=mysql_fetch_assoc($this->request);
-        //echo $this->line['item_name_fr'];
-        return $this->line;   	
+        if ( $this->statement ) {
+            $this->line = $this->statement->fetch(PDO::FETCH_ASSOC);
+            return $this->line;
+        }
+        return null;
     }
 
     public function request()
@@ -126,7 +132,7 @@ class Database
     // count results of a selection
     public function count()
     {
-        return mysql_num_rows($this->request);
+        return $this->count;
     }
 
     public function __get($name)

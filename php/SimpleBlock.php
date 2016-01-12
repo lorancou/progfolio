@@ -30,8 +30,8 @@ class SimpleBlock extends Block
         else // hit the database
         {
             $connection = Database::instance();
-			$connection->select($elementCode,0,1,"`".$elementCode."_".ID."`='".$idElement."'");
-			if ($connection->count()==0) // no result
+			$count = $connection->select($elementCode,0,1,"`".$elementCode."_".ID."`='".$idElement."'");
+			if ($count==0) // no result
 			{
 				MessageStack::instance()->add(
 					Message::error,get_class(),

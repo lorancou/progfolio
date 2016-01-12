@@ -11,10 +11,10 @@
    * This program is free software - see README for details.
    */
 
-define("SERVER", "mysql_server_address_here");
-define("LOGIN", "mysql_username_here");
-define("PASSWORD", "mysql_password_here");
-define("BASE", "progfolio");
+define("DBHOST", "database_hostname_here");
+define("DBUSER", "database_username_here");
+define("DBPASSWD" "database_password_here");
+define("DBNAME", "database_name_here");
 
 define("NO_WELCOME_NEWS", 5);
 define("NO_RECORDS_PER_BLOCK", 10);
