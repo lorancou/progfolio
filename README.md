@@ -10,7 +10,7 @@ Contact: <lorancou@free.fr>
 Formerly named "Page perso" for versions 0.1, 0.2 and 0.3
 
 Parsedown (php/Parsedown.php)  
-Copyright (c) 2013 Emanuil Rusev, erusev.com
+Copyright (c) 2013 Emanuil Rusev, erusev.com  
 License: https://github.com/erusev/parsedown/blob/master/LICENSE.txt
 <https://github.com/erusev/parsedown>
 
