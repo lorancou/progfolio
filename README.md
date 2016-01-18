@@ -9,10 +9,10 @@ Copyright (c) 2006-2016 Laurent Couvidou
 Contact: <lorancou@free.fr>  
 Formerly named "Page perso" for versions 0.1, 0.2 and 0.3
 
-Wiki parser (wiki.inc.php)  
-Copyright (c) Mildred  
-<http://louve.dyndns.org/projets/wikiparser/index.html.fr>  
-<http://mildred632.free.fr/projets/wikiparser/index.html.fr>
+Parsedown (php/Parsedown.php)  
+Copyright (c) 2013 Emanuil Rusev, erusev.com
+License: https://github.com/erusev/parsedown/blob/master/LICENSE.txt
+<https://github.com/erusev/parsedown>
 
 Full Operating system language detection (lang.inc.php)  
 Copyright (c) Techpatterns.com  

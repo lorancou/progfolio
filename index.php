@@ -15,7 +15,6 @@ require_once( 'php/config.inc.php' );
 require_once( 'php/const.inc.php' );
 require_once( 'php/lang.inc.php' );
 require_once( 'php/init.inc.php' );
-require_once( 'php/wiki.inc.php' );
 require_once( 'php/config-' . Progfolio::instance()->language . '.inc.php' ); // TODO: db defaults
 require_once( 'php/i18n-' . Progfolio::instance()->language . '.inc.php' );
 

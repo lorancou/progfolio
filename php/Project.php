@@ -173,10 +173,10 @@ class Project extends Element
             $div->end();
         }
 
-        $desc = new WikiDiv($this->description);
+        $desc = new MarkdownDiv($this->description);
         $desc->display();
 
-        $body = new WikiDiv($this->body);
+        $body = new MarkdownDiv($this->body);
         $body->display();
 
 
@@ -234,7 +234,7 @@ class Project extends Element
             $urlDiv->end();
         }
 
-        $desc = new WikiDiv($this->description);
+        $desc = new MarkdownDiv($this->description);
         $desc->display();
 
         $images = $this->retrieveImages();

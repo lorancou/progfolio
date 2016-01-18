@@ -13,4 +13,4 @@ TODO list
 - Form functions: label first
 - Find a way to output wiki stuff nicely in HTML (indentation, line breaks)
 - Localized consts (HEADER, FOOTER, etc.) as db defaults?
-- Auto-import structure.sql if somlething's missing?
+- Auto-import structure.sql if something's missing?

@@ -35,7 +35,7 @@ class CompleteLink extends Element
 		$title = new Title(2,$this->name);
 		$title->display();
 		
-		$desc = new WikiDiv($this->description);
+		$desc = new MarkdownDiv($this->description);
 		$desc->display();
 		
 		$link = new Link($this->url,$this->url);

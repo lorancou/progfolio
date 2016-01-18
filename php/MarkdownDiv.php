@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * WikiDiv.php
+   * MarkdownDiv.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio
@@ -11,22 +11,23 @@
    * This program is free software - see README.md for details.
    */
 
-class WikiDiv implements IDisplayable
+class MarkdownDiv implements IDisplayable
 {
-	protected $text;
-	
-	public function __construct($text)
+    protected $text;
+
+    public function __construct($text)
     {
         $this->text = $text;
     }
-   
+
     public function display()
     {
         echoOpen('<div class="wiki">');
-        echoFlat(WikiParser::instance()->parse($this->text)); // TODO find a way to format this nicely
+        $Parsedown = new Parsedown();
+        echoFlat($Parsedown->text($this->text));
         echoClose('</div>');
-	}   
-	
+    }   
+
 }
 
 ?>
