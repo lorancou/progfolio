@@ -11,7 +11,7 @@
    * This program is free software - see README.md for details.
    */
 
-class Division implements IDisplayableContainer
+class Division implements IContainer
 {
 
     protected $type;

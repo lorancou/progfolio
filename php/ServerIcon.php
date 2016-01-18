@@ -11,7 +11,7 @@
    * This program is free software - see README.md for details.
    */
 
-class ServerIcon implements IDisplayableContent
+class ServerIcon implements IDisplayable
 {
     // http://www.phptoys.com/e107_plugins/content/content.php?content.41
     // Function to check response time

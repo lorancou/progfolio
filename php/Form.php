@@ -11,7 +11,7 @@
    * This program is free software - see README.md for details.
    */
 
-class Form implements IDisplayableContainer
+class Form implements IContainer
 {
 
 	private $code;

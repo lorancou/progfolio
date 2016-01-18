@@ -22,19 +22,19 @@ Setup
 --------------------------------------------------------------------------------
 
 Prerequisites:
-- Web server with PHP5 support
-- MySQL server (version >= 5.0)
+- Web server with PHP support
+- Database server (compatible with PHP PDO)
 
-Rename the following files:
+Copy all the files to the webserver, and rename the following ones:
 - php/config.inc.php.template -> php/config.inc.php
 - php/config-en.inc.php.template -> php/config-en.inc.php
 - php/config-fr.inc.php.template -> php/config-fr.inc.php
 
-Enter the connection info for your database in the first one. Make sure you also
-set proper permissions on this file so that nobody can read your plain text
-password. Then import db/structure.sql in your database (using phpmyadmin for
-instance). It's ready! Just open index.php in a browser. Contact me for
-troubleshooting.
+Make sure you set proper permissions on these so that nobody can read password.
+
+Enter the connection info for your database in the first one. Then import
+db/structure.sql in it (using phpmyadmin for instance). It's ready! Just open
+index.php in a browser. Contact me fortroubleshooting.
 
 Known issues
 ---------------------------------------------------------------------------------

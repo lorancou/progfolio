@@ -1,7 +1,7 @@
 <?php
 
   /*
-   * IDisplayableContent.php
+   * IContainer.php
    * ----------------------------------------------------------------------------
    *
    * Progfolio
@@ -11,10 +11,11 @@
    * This program is free software - see README.md for details.
    */
 
-interface IDisplayableContent
+interface IContainer
 {
 
-	public function display();
+	public function begin();
+	public function end();
 
 }
 

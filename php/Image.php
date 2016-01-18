@@ -11,7 +11,7 @@
    * This program is free software - see README.md for details.
    */
 
-class Image implements IDisplayableContent
+class Image implements IDisplayable
 {
 
 	private $url;

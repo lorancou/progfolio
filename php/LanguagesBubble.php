@@ -11,7 +11,7 @@
    * This program is free software - see README.md for details.
    */
 
-class LanguagesBubble implements IDisplayableContent
+class LanguagesBubble implements IDisplayable
 {
 
     public function __construct()

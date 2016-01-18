@@ -11,7 +11,7 @@
    * This program is free software - see README.md for details.
    */
 
-class Paragraph implements IDisplayableContent
+class Paragraph implements IDisplayable
 {
 	protected $type;
 	protected $text;

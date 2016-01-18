@@ -11,7 +11,7 @@
    * This program is free software - see README.md for details.
    */
 
-class Logo implements IDisplayableContent
+class Logo implements IDisplayable
 {
 
     // TODO: "un-hardcode" that

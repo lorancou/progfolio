@@ -11,7 +11,7 @@
    * This program is free software - see README.md for details.
    */
 
-class List implements IDisplayableContainer
+class List implements IContainer
 {
 
 	const SORTED    = 0;

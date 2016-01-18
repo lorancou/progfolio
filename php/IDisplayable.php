@@ -14,6 +14,8 @@
 interface IDisplayable
 {
 
+	public function display();
+
 }
 
 ?>

@@ -11,7 +11,7 @@
    * This program is free software - see README.md for details.
    */
 
-class AdminBubble implements IDisplayableContent
+class AdminBubble implements IDisplayable
 {
 
     // mode

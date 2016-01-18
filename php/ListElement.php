@@ -11,7 +11,7 @@
    * This program is free software - see README.md for details.
    */
 
-class ListElement implements IDisplayableContainer
+class ListElement implements IContainer
 {
 
 	private $type;

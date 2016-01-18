@@ -11,7 +11,7 @@
    * This program is free software - see README.md for details.
    */
 
-class XhtmlCode implements IDisplayableContainer
+class XhtmlCode implements IContainer
 {
 	protected $page;
    
