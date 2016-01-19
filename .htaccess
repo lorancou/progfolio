@@ -1,2 +1,16 @@
 Order Allow,Deny
 Allow from All
+<IfModule mod_rewrite.c>
+RewriteEngine On
+
+RewriteRule (.+)/$ /$1 [L,R=301]
+#RewriteRule ^([-A-Za-z0-9]+)$ ?page=$1 [L]
+
+RewriteRule ^projects/([-A-Za-z0-9]+)$ ?page=projects&type=$1 [L]
+
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+#RewriteRule . /index.php [NC,L]
+
+</IfModule>
