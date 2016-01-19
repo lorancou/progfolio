@@ -16,6 +16,9 @@ define("DBUSER", "database_username_here");
 define("DBPASSWD" "database_password_here");
 define("DBNAME", "database_name_here");
 
+define("LOGIN", "admin_login_here");
+define("PASSWD", "admin_password_here");
+
 define("NO_WELCOME_NEWS", 5);
 define("NO_RECORDS_PER_BLOCK", 10);
 
