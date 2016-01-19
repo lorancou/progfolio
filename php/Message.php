@@ -14,7 +14,7 @@
 class Message
 {
 
-	const system = "system";
+    const system = "system";
     const error = "error";
     const warning = "warning";
     const info = "info";
@@ -42,7 +42,7 @@ class Message
             $par = new Paragraph($this->type, '['.$this->class.'] '.$this->text);
             $par->display();
         }
-    }   
+    }
 
 }
 

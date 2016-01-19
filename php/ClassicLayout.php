@@ -21,51 +21,52 @@ class ClassicLayout implements ILayout
         // begin XHTML code
         $xhtml = new XhtmlCode($page);
         $xhtml->begin();
-		{
-			// languages
-			$languages = new LanguagesBubble;
-			$languages->display();
+        {
+            // languages
+            $languages = new LanguagesBubble;
+            $languages->display();
 
-			// header
-			$div = new UniqueDivision("none", "header");
-			$div->begin();
-			{
-				$title1 = new Title(1, HEADER);
-				$title1->display();
-				$title2 = new Title(2, DESCRIPTION);
-				$title2->display();
-			}
-			$div->end();
+            // header
+            $div = new UniqueDivision("none", "header");
+            $div->begin();
+            {
+                $title1 = new Title(1, HEADER);
+                $title1->display();
+                $title2 = new Title(2, DESCRIPTION);
+                $title2->display();
+            }
+            $div->end();
 
-			// current page
-			$div = new UniqueDivision("none", "content");
-			$div->begin();
-			{
-				$page->display();
-			}
-			$div->end();
+            // current page
+            $div = new UniqueDivision("none", "content");
+            $div->begin();
+            {
+                $page->display();
+            }
+            $div->end();
 
-			// menu
-			$div = new UniqueDivision("none", "navi");
-			$div->begin();
-			{
-				$bloc = new MenuBlock();
-				$bloc->display();
-			}
-			$div->end();
+            // menu
+            $div = new UniqueDivision("none", "navi");
+            $div->begin();
+            {
+                $bloc = new MenuBlock();
+                $bloc->display();
+            }
+            $div->end();
 
-			// messages
-			MessageStack::instance()->display();
+            // messages
+            MessageStack::instance()->display();
 
-			// footer
-			$div = new UniqueDivision("none", "footer");
-			$div->begin();
-			{
-				$par = new Paragraph(1, FOOTER);
-				$par->display();
-			}
-			$div->end();
-		}
+            // footer
+            $div = new UniqueDivision("none", "footer");
+            $div->begin();
+            {
+                $par = new Paragraph(1, FOOTER);
+                $par->display();
+            }
+            $div->end();
+        }
+
         // end XHTML code
         $xhtml->end();
     }

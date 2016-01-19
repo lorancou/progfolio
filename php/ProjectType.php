@@ -30,14 +30,14 @@ class ProjectType extends Element
 
     public static function getDatabaseId($id)
     {
-        $connection = Database::instance();
-        $connection->select(
+        $db = Database::instance();
+        $db->select(
             "typep",
             0,1,
             "`typep_".ID."`='".$id."'",
             "typep_id");
-        $connection->next();
-        $data = $connection->data();
+        $db->next();
+        $data = $db->data();
         return $data["id"];
     }
 

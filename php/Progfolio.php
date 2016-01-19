@@ -42,20 +42,20 @@ class Progfolio
                 {
                     MessageStack::instance()->add(
                         Message::error,get_class(),
-                        "Bad login: ".$_POST["login"]);
+                        "Wrong login: ".$_POST["login"]);
                 }
-                else if ($_POST["password"]!=PASSWORD)
+                else if ($_POST["password"]!=PASSWD)
                 {
                     MessageStack::instance()->add(
                         Message::error,get_class(),
-                        "Bad password");
+                        "Wrong password");
                 }
                 else
                 {
                     $_SESSION['open']=TRUE;
                     MessageStack::instance()->add(
                         Message::info,get_class(),
-                        "Login done");
+                        "Logged in");
                 }
             }
             else if ($_POST[ACTION] == LOGOUT_ACTION)
