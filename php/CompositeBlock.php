@@ -43,8 +43,8 @@ class CompositeBlock extends Block
     protected final function displayBlock()
     {
         $i = 0;
-        $connection = Database::instance();
-        $connection->select(
+        $db = Database::instance();
+        $db->select(
             $this->elementCode,
             $this->begin,
             $this->noLines,
@@ -52,9 +52,8 @@ class CompositeBlock extends Block
             "*",
             $this->sort?$this->sortString():NULL,
             $this->order?$this->orderString():NULL);
-        $request = $connection->request(); // croisements
-        //$continue = TRUE;
-        while($line=mysql_fetch_assoc($request)) // TODO to Database.php
+
+        while($line=$db->fetchAssoc())
         {
             if ( $i > 0 ) 
             {
@@ -126,7 +125,7 @@ class CompositeBlock extends Block
     private function conditionString()
     {
         $idBase = ProjectType::getDatabaseId($this->type);
-        return "`".$this->elementCode."_type`=$idBase";
+        return "`".$this->elementCode."_type`=".$idBase;
     }
 
 }

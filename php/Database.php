@@ -14,10 +14,9 @@
 class Database
 {
 
-    private $request;
     private $table;
     private $line;
-
+    private $count;
     private $pdo;
     private $statement;
 
@@ -39,36 +38,41 @@ class Database
         }
     }
 
-    // SELECT request
     public function select(
         $table,
         $begin=0,
         $noLines=10,
         $conditions=NULL,
         $fields="*",
-        $tri=NULL,
+        $sort=NULL,
         $order=NULL)
     {
         $this->table = $table;
         if ($fields != "*") $fields = "`".$fields."`";
         $sql="SELECT $fields FROM `$table`";
         if ($conditions!=NULL) $sql.=" WHERE $conditions";
-        if ($tri!=NULL) $sql.=" ORDER BY `$tri`";
+        if ($sort!=NULL) $sql.=" ORDER BY `$sort`";
         if ($order!=NULL) $sql.= " $order";
         if ($begin != NULL && $noLines != NULL)
         {
             $end = $noLines-$begin;
             $sql.=" LIMIT $begin,$end";
-        }		
+        }
         $sql .= ";";
-        //echo $sql.'<br/>';
-        $this->execute($sql);
 
-        $res = $this->pdo->query('SELECT COUNT(*) FROM '.$table);
-        return $res->fetchColumn();
+        $this->statement = $this->execute($sql);
+
+        if ( $this->statement )
+        {
+            $countStatement = $this->pdo->query("SELECT COUNT(*) FROM `".$table."`");
+            $this->count = $countStatement->fetchColumn();
+        } else {
+            $this->count = 0;
+        }
+
+        return $this->count;
     }
 
-    // INSERT request
     public function add($table,$fields="*")
     {
         $this->table = $table;
@@ -85,7 +89,6 @@ class Database
         $this->execute($sql);
     }
 
-    // UPDATE request
     public function update($element,$id,$fields="*")
     {
         $this->table = $element;
@@ -97,7 +100,6 @@ class Database
         $this->execute($sql);
     }
 
-    // DELETE request
     public function delete($element,$id)
     {
         $this->table = $element;
@@ -105,28 +107,38 @@ class Database
         $this->execute($sql);
     }
 
-    // execute request
     public function execute($sql)
     {
+        //MessageStack::instance()->add("info", "Database", $sql);
+        //echo($sql);
+
         // When query() fails, it does not return a PDOStatement object. It simply returns false.
-        if ( !$this->statement = $this->pdo->query($sql) ) {
+        if ( !$tempStatement = $this->pdo->query($sql) ) {
             MessageStack::instance()->add( Message.error, get_class(), "SQL query failed" );
+            return null;
         }
+
+        return $tempStatement;
     }
 
     // progress in selection
     public function next()
     {
-        if ( $this->statement ) {
+        if ( $this->statement )
+        {
             $this->line = $this->statement->fetch(PDO::FETCH_ASSOC);
             return $this->line;
         }
         return null;
     }
 
-    public function request()
+    public function fetchAssoc()
     {
-        return $this->request;
+        if ( $this->statement )
+        {
+            return $this->statement->fetch(PDO::FETCH_ASSOC);
+        }
+        return NULL;
     }
    
     // count results of a selection
