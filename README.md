@@ -7,16 +7,19 @@ The programmer's portfolio
 Copyright (c) 2006-2016 Laurent Couvidou  
 <http://lorancou.free.fr/index.php?page=project&id-unix=progfolio>  
 Contact: <lorancou@free.fr>  
-Formerly named "Page perso" for versions 0.1, 0.2 and 0.3
+Formerly named "Page perso" for versions 0.1, 0.2 and 0.3..
 
-Parsedown (php/Parsedown.php)  
+Open Sans (extern/font)  
+Copyright (c) Steve Matteson, Ascender Corp  
+<https://www.google.com/fonts/specimen/Open+Sans>  
+
+Full Operating system language detection (extern/lang)  
+Copyright (c) 2008 Techpatterns.com  
+<http://techpatterns.com/downloads/php_language_detection.php>  
+
+Parsedown (extern/markdown)  
 Copyright (c) 2013 Emanuil Rusev, erusev.com  
-License: https://github.com/erusev/parsedown/blob/master/LICENSE.txt  
-<https://github.com/erusev/parsedown>
-
-Full Operating system language detection (lang.inc.php)  
-Copyright (c) Techpatterns.com  
-<http://techpatterns.com/downloads/php_language_detection.php>
+<https://github.com/erusev/parsedown>  
 
 Setup
 --------------------------------------------------------------------------------

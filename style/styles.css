@@ -1,10 +1,17 @@
+/***** Font ********************************************************************/
+
+@font-face {
+    font-family: "OpenSans";
+    src: url( "/extern/font/OpenSans-Regular.ttf" );
+}
+
 /***** Page setup **************************************************************/
 
 body{
     margin: 0;
     padding: 0;
     text-align: center;
-    font-family: Times, serif;
+    font-family: "OpenSans", sans-serif;
     font-size: 1.0em;
     color: #666666;
     background: #cccccc;
@@ -16,7 +23,7 @@ div#container{
     padding: 1em;
     width: 53em;
     text-align: left;
-    background: #eeeeee;
+    /*background: #eeeeee;*/
 }
 
 div#header{
@@ -35,10 +42,10 @@ div#navi{
     padding: 0.5em;
     width: 15em;
     height: 26em;
-    background: #fefefe;
+    /*background: #fefefe;
     background-image: url('../images/navi-bg.png');
     background-position: bottom right;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat;*/
 }
 
 div#content{
@@ -47,7 +54,7 @@ div#content{
     padding: 0.5em;
     width: 35em;
     min-height: 26em;
-    background: #fefefe;
+    /*background: #fefefe;*/
 }
 
 div#footer{
