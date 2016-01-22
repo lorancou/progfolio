@@ -22,6 +22,7 @@ class ClassicLayout implements ILayout
         $xhtml = new XhtmlCode($page);
         $xhtml->begin();
         {
+            echoOpen('<div class="bg">');
             echoOpen('<div class="container">');
             {
                 echoOpen('<header>');
@@ -44,8 +45,8 @@ class ClassicLayout implements ILayout
                 //$languages->display();
             }
             echoClose('</div>');
-
             echoFlat( "<hr/>" );
+            echoClose('</div>');
 
             // open container div
             echoOpen('<div class="container">');
@@ -69,12 +70,12 @@ class ClassicLayout implements ILayout
             // close container div
             echoClose('</div>');
 
-            echoFlat( "<hr/>" );
-
             // messages
             MessageStack::instance()->display();
 
             // open container div
+            echoOpen('<div class="bg">');
+            echoFlat( "<hr/>" );
             echoOpen('<div class="container">');
             {
                 // footer
@@ -86,6 +87,7 @@ class ClassicLayout implements ILayout
                 echoClose( "</footer>" );
             }
             // close container div
+            echoClose('</div>');
             echoClose('</div>');
         }
 

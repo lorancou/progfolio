@@ -19,6 +19,12 @@
 
 body{
     font-family: "OpenSans-Regular", sans-serif;
+    background: #eeeeee;
+    margin: 0;
+}
+
+div.bg{
+    padding: 0;
     background: #cccccc;
 }
 
