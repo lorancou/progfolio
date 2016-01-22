@@ -97,7 +97,7 @@ class Item extends Element
         }
         $logo->display();
 
-        $link = new Link( $this->name, $this->url );
+        $link = new Link( ">".$this->name, $this->url );
         $link->display();
     }
 

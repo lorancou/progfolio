@@ -22,49 +22,71 @@ class ClassicLayout implements ILayout
         $xhtml = new XhtmlCode($page);
         $xhtml->begin();
         {
-            // languages
-            $languages = new LanguagesBubble;
-            $languages->display();
-
-            // header
-            $div = new UniqueDivision("none", "header");
-            $div->begin();
+            echoOpen('<div class="container">');
             {
-                $title1 = new Title(1, HEADER);
-                $title1->display();
-                $title2 = new Title(2, DESCRIPTION);
-                $title2->display();
-            }
-            $div->end();
+                echoOpen('<header>');
+                {
+                    $par= new Paragraph( "header", HEADER );
+                    $par->display();
+                }
+                echoClose('</header>');
 
-            // current page
-            $div = new UniqueDivision("none", "content");
-            $div->begin();
-            {
-                $page->display();
-            }
-            $div->end();
+                $div = new UniqueDivision("none", "navbar");
+                $div->begin();
+                {
+                    $par= new Paragraph( "description", DESCRIPTION );
+                    $par->display();
+                }
+                $div->end();
 
-            // menu
-            $div = new UniqueDivision("none", "navi");
-            $div->begin();
-            {
-                $bloc = new MenuBlock();
-                $bloc->display();
+                // languages
+                //$languages = new LanguagesBubble;
+                //$languages->display();
             }
-            $div->end();
+            echoClose('</div>');
+
+            echoFlat( "<hr/>" );
+
+            // open container div
+            echoOpen('<div class="container">');
+            {
+                // current page
+                $div = new UniqueDivision("none", "content");
+                $div->begin();
+                {
+                    $page->display();
+                }
+                $div->end();
+
+                // nav
+                echoOpen( "<nav>" );
+                {
+                    $bloc = new MenuBlock();
+                    $bloc->display();
+                }
+                echoClose('</nav>');
+            }
+            // close container div
+            echoClose('</div>');
+
+            echoFlat( "<hr/>" );
 
             // messages
             MessageStack::instance()->display();
 
-            // footer
-            $div = new UniqueDivision("none", "footer");
-            $div->begin();
+            // open container div
+            echoOpen('<div class="container">');
             {
-                $par = new Paragraph(1, FOOTER);
-                $par->display();
+                // footer
+                echoOpen( "<footer>" );
+                {
+                    $par = new Paragraph(1, FOOTER);
+                    $par->display();
+                }
+                echoClose( "</footer>" );
             }
-            $div->end();
+            // close container div
+            echoClose('</div>');
         }
 
         // end XHTML code

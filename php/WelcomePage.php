@@ -13,29 +13,19 @@
 
 class WelcomePage extends Page
 {
-    public function hasBodyOnLoad()
+
+    public function display()
     {
-        return (file_exists('addon/addon_body_on_load.php'));
-    }
-
-    public function echoBodyOnLoad()
-    {
-        require 'addon/addon_body_on_load.php';
-    }
-
-	public function display()
-	{
-		$block = new SimpleBlock(ARTICLE_ELEMENT,'welcome',DISPLAY_MODE);
-		$block->display();
-
-        if (file_exists('addon/addon.php'))
+        if ( WELCOME_README )
         {
-            $div = new Division("addon");
-            $div->begin();
-            require 'addon/addon.php';
-            $div->end();
+            $block = new FileContentBlock( "/README.md" );
         }
-	}
+        else
+        {
+            $block = new SimpleBlock( ARTICLE_ELEMENT, "welcome", DISPLAY_MODE );
+        }
+        $block->display();
+    }
 
 }
 

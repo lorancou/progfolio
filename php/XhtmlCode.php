@@ -13,15 +13,15 @@
 
 class XhtmlCode implements IContainer
 {
-	protected $page;
+    protected $page;
    
-	public function __construct($page=NULL)
+    public function __construct($page=NULL)
     {
         $this->page = $page;
     }
 
-	public function begin()
-	{
+    public function begin()
+    {
         // XHTML doctype
         echoFlat('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">');
         
@@ -38,40 +38,23 @@ class XhtmlCode implements IContainer
         echoFlat('<meta name="keywords" content="'.KEYWORDS.'" />');
         echoFlat('<meta name="robots" content="all"/>');
         echoFlat('<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />');
-        echoFlat('<link rel="stylesheet" type="text/css" href="style/reset.css" media="screen" />');
-        echoFlat('<link rel="stylesheet" type="text/css" href="style/styles.css" media="screen" />');
-        echoFlat('<link rel="icon" type="image/png" href="images/icon.png"/>');
-
-        // some more header stuff on page demand
-        if ($this->page && $this->page->hasExtraHeaders())
-        {
-            $this->page->echoExtraHeaders();
-        }
+        //echoFlat('<link rel="stylesheet" type="text/css" href="/style/reset.css" media="screen" />');
+        echoFlat('<link rel="stylesheet" type="text/css" href="/style/styles.css" media="screen" />');
+        echoFlat('<link rel="icon" type="image/png" href="/images/icon.png"/>');
 
         // that's it for the headers
         echoClose('</head>');
         
         // open body
-        if ($this->page && $this->page->hasBodyOnLoad())
-        {
-            $this->page->echoBodyOnLoad();
-        }
-        else
-        {
-            echoOpen('<body>');
-        }
+        echoOpen('<body>');
+    }
 
-        // open container div
-        echoOpen('<div id="container">');
-	}
-
-	public function end()
-	{
+    public function end()
+    {
         // close everything
-        echoClose('</div>');
         echoClose('</body>');
         echoClose('</html>');
-	}
+    }
 
 } // XhtmlCode
 

@@ -54,7 +54,7 @@ External
 Open Sans
 - extern/font
 - Apache License, version 2.0
-- Copyright (c) Steve Matteson, Ascender Corp
+- Copyright (c) 2011 Steve Matteson, Ascender Corp
 - <https://www.google.com/fonts/specimen/Open+Sans>
 
 Full Operating system language detection
