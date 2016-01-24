@@ -45,7 +45,6 @@ class ClassicLayout implements ILayout
                 //$languages->display();
             }
             echoClose('</div>');
-            echoFlat( "<hr/>" );
             echoClose('</div>');
 
             // open container div
@@ -75,7 +74,6 @@ class ClassicLayout implements ILayout
 
             // open container div
             echoOpen('<div class="bg">');
-            echoFlat( "<hr/>" );
             echoOpen('<div class="container">');
             {
                 // footer
