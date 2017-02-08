@@ -1,10 +1,16 @@
 Progfolio
 ================================================================================
 
+
+TEST IMAGE
+![Alt text](/images/icon.png)
+
+
+
 The programmer's portfolio
 --------------------------------------------------------------------------------
 
-Copyright (c) 2006-2016 Laurent Couvidou  
+Copyright (c) 2006-2017 Laurent Couvidou  
 Contact: <lorancou@free.fr>
 
 Setup
@@ -26,7 +32,7 @@ db/structure.sql in it (using phpmyadmin for instance). It's ready! Just open
 index.php in a browser. Contact me fortroubleshooting.
 
 Known issues
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 This code relies on magic_quotes_gpc set to "On" in php.ini. It's now deprecated
 with PHP 5.3.0 and set to "Off" by default ; if your PHP version is that recent,
@@ -34,7 +40,7 @@ make sure you set it back to "On" or you'll get trouble with single quotes,
 backslashes and others.
 
 License
----------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
 
 This program is free software: you can redistribute it and/or modify it under the
 terms of the GNU General Public License as published by the Free Software
@@ -56,12 +62,6 @@ Open Sans
 - Apache License, version 2.0
 - Copyright (c) 2011 Steve Matteson, Ascender Corp
 - <https://www.google.com/fonts/specimen/Open+Sans>
-
-Full Operating system language detection
-- extern/lang
-- GNU GPL v3
-- Copyright (c) 2008 Techpatterns.com
-- <http://techpatterns.com/downloads/php_language_detection.php>
 
 Parsedown
 - extern/markdown
