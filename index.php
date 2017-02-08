@@ -33,7 +33,7 @@ require_once( 'php/test_load_page.php' );
         <div id="wrap">
             <header><?php echo TITLE; ?></header>
             <hr/>
-            <div>*** NAV ***</div>
+            <div><?php echo $nav; ?></div>
             <?php echo $page; ?>
             <hr/>
             <footer><?php echo FOOTER; ?></footer>

@@ -2,9 +2,9 @@ Progfolio
 ================================================================================
 
 This is a basic Markdown-based website engine for creating programmer
-portfolios. It just reads .md files from the server and creates web pages with
-them. No need to bother with databases or user accounts or comments or
-Javascript frameworks. Just edit good old text files and feel the magic.
+portfolios and such. It just reads .md files from the filesystem and creates web
+pages with them. No need to bother with databases or user accounts or comments
+or Javascript frameworks. Just edit good old text files and feel the magic.
 
 Copyright (c) 2006-2017 Laurent Couvidou  
 Contact: <lorancou@free.fr>
@@ -16,6 +16,9 @@ Setup
 - Rename php/config.php.template → php/config.php
 - Fill it with your info
 - I guess that's it: try opening index.php in you browser
+- Try adding new .md files in the content folder
+- Refresh the web page
+- ✌ 
 
 License
 --------------------------------------------------------------------------------
