@@ -10,7 +10,7 @@ Contact: lorancou@free.fr
 This program is free software - see README.md for details.
 ------------------------------------------------------------------------------*/
 
-require_once( 'php/config.inc.php' );
+require_once( 'php/config.php' );
 require_once( 'php/test_load_page.php' );
 
 ?>
