@@ -11,7 +11,8 @@ This program is free software - see README.md for details.
 ------------------------------------------------------------------------------*/
 
 require_once( 'php/config.php' );
-require_once( 'php/test_load_page.php' );
+require_once( 'php/load_nav.php' );
+require_once( 'php/load_page.php' );
 
 ?>
 <!DOCTYPE html PUBLIC
@@ -25,18 +26,27 @@ require_once( 'php/test_load_page.php' );
         <meta name="keywords" content="<?php echo KEYWORDS; ?>" />
         <meta name="robots" content="all"/>
         <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-        <!--<link rel="stylesheet" type="text/css" href="/style/reset.css" />-->
+        <link rel="stylesheet" type="text/css" href="/style/reset.css" />
+        <link rel="stylesheet" type="text/css" href="/style/fonts.css" />
+        <link rel="stylesheet" type="text/css" href="/style/layout.css" />
         <link rel="stylesheet" type="text/css" href="/style/styles.css" />
         <link rel="icon" type="image/png" href="/images/icon.png"/>
     </head>
     <body>
         <div id="wrap">
-            <header><?php echo TITLE; ?></header>
-            <hr/>
-            <div><?php echo $nav; ?></div>
-            <?php echo $page; ?>
-            <hr/>
-            <footer><?php echo FOOTER; ?></footer>
+            <header>
+                <div id="title">
+                    <a href="/"><?php echo TITLE; ?></a>
+                </div>
+                <nav>
+                    <?php echo $nav_html; ?>
+                </nav>
+            </header>
+            <main><?php echo $page_html; ?>
+            </main>
+            <footer>
+                <?php echo COPYRIGHT; ?>
+            </footer>
         </div>
     </body>
 </html>
