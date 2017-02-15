@@ -22,7 +22,7 @@ html, body {
 }
 
 header {
-    font-size: 0.8em;
+    font-size: 0.9em;
     width: 600px;
     height: 2em;
     border-bottom: thin dotted black;
@@ -42,19 +42,13 @@ main {
 }
 
 footer {
-    font-size: 0.8em;
+    font-size: 0.9em;
     width: 600px;
     height: 2em;
     text-align: right;
     border-top: thin dotted black;
     position: absolute;
     bottom:0;
-    display: flex;
     line-height: 2em;
     vertical-align: middle;
-}
-
-#copyright {
-    flex-grow: 1;
-    text-align: right;
 }

@@ -16,7 +16,7 @@ Setup
 - Rename php/config.php.template → php/config.php
 - Fill it with your info
 - I guess that's it: try opening index.php in you browser
-- Try adding new .md files in the content folder
+- Try adding new .md files in the content folder (maybe an index.md?)
 - Refresh the web page
 - ✌ 
 

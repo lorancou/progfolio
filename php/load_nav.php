@@ -10,16 +10,18 @@ Contact: lorancou@free.fr
 This program is free software - see README.md for details.
 ------------------------------------------------------------------------------*/
 
-$nav = explode( ',', NAV );
-
 $nav_html = "";
 
-foreach ( $nav as $page ) {
-    $nav_html = $nav_html.'<a href="'.$page.'">'.$page.'</a>&nbsp;';
+foreach ( NAV_INTERN as $nav_intern ) {
+    $nav_html .= "&nbsp;<a href=\"$nav_intern\">$nav_intern</a>";
 }
 
-$nav_html = $nav_html.'<a href="'.TWITTER.'"><img src="images/twitter.png" /></a>&nbsp;';
-$nav_html = $nav_html.'<a href="'.LINKEDIN.'"><img src="images/linkedin.png" /></a>&nbsp;';
-$nav_html = $nav_html.'<a href="'.EMAIL.'"><img src="images/email.png" /></a>';
+foreach ( NAV_EXTERN as $nav_extern ) {
+    $nav_extern = explode( ',', $nav_extern );
+    if ( count( $nav_extern ) >= 3 ) {
+        $nav_html .= "&nbsp;<a href=\"$nav_extern[2]\">"
+                   . "<img src=\"$nav_extern[0]\" alt=\"$nav_extern[1]\"/></a>";
+    }
+}
 
 ?>

@@ -10,9 +10,23 @@ Contact: lorancou@free.fr
 This program is free software - see README.md for details.
 ------------------------------------------------------------------------------*/
 
-const TITLE = 'Title';
-const DESCRIPTION = 'Description';
-const KEYWORDS = 'comma, separated, keywords';
-const FOOTER = 'Footer';
+const TITLE =
+    'Your Name';
+const KEYWORDS =
+    'comma,separated,keywords';
+const NAV_INTERN = [
+    //"mypage1", --> requires pages/mypage1.md
+    //"mypage2", --> requires pages/mypage2.md
+    //...
+];
+const NAV_EXTERN = [
+    //"images/github.png,GitHub,https://github.com/you",
+    //"images/twitter.png,Twitter,https://twitter.com/you",
+    //"images/linkedin.png,LinkedIn,https://linkedin.com/in/you",
+    //"images/email.png,E-mail,mailto:your@email.com",
+    //...
+];
+const COPYRIGHT =
+    'Copyright goes here';
 
 ?>
