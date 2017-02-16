@@ -36,7 +36,7 @@ require_once( 'php/load_page.php' );
         <div id="wrap">
             <header>
                 <div id="title">
-                    <a href="/"><?php echo TITLE; ?></a>
+                    <img src="symbols/icon.png" alt=""/> <a href="/"><?php echo TITLE; ?></a>
                 </div>
                 <nav>
                     <?php echo $nav_html; ?>
