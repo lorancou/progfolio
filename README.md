@@ -16,7 +16,8 @@ Setup
 - Rename php/config.php.template → php/config.php
 - Fill it with your info
 - I guess that's it: try opening index.php in you browser
-- Try adding new .md files in the content folder (maybe an index.md?)
+- You should get the 404 page
+- Try to create a pages folder, and adding an index.md file in it
 - Refresh the web page
 - ✌ 
 
