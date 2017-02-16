@@ -19,6 +19,7 @@ html, body {
     width: 600px;
     min-height: 100%;
     margin: 0 auto;
+    position:relative;
 }
 
 header {
@@ -39,6 +40,7 @@ nav {
 main {
     width: 500px;
     margin: 0 auto;
+    padding-bottom:2em;
 }
 
 footer {
