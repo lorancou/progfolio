@@ -28,6 +28,10 @@ a:active {
     text-decoration: underline;
 }
 
+em {
+    font-style: italic;
+}
+
 hr {
     border: 0;
     border-bottom: thin dotted black;
@@ -51,6 +55,7 @@ p {
     margin-top: 1em;
     margin-bottom: 1em;
     line-height: 130%;
+    text-align: justify;
 }
 
 ul {
