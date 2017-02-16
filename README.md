@@ -41,11 +41,11 @@ External
 Open Sans
 - extern/font
 - Apache License, version 2.0
-- Copyright (c) 2011 Steve Matteson, Ascender Corp
+- Copyright © 2011 Steve Matteson, Ascender Corp
 - <https://www.google.com/fonts/specimen/Open+Sans>
 
 Parsedown
 - extern/markdown
 - MIT License
-- Copyright (c) 2013 Emanuil Rusev, erusev.com
+- Copyright © 2013 Emanuil Rusev, erusev.com
 - <https://github.com/erusev/parsedown>

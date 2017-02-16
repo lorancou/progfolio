@@ -49,4 +49,4 @@ require_once( 'php/load_page.php' );
             </footer>
         </div>
     </body>
-</html>
+</html> 
