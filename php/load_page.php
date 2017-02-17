@@ -30,6 +30,10 @@ if ( file_exists( $file ) ) {
     $content = file_get_contents( $file );
     $markdown = $Parsedown->text( $content );
     $page_html = "\n" . $markdown . "\n";
+} else if ( DEFAULT_README ) {
+    $content = file_get_contents( "README.md" );
+    $markdown = $Parsedown->text( $content );
+    $page_html .= "\n" . $markdown . "\n";
 } else {
     header( 'HTTP/1.1 404 Not Found' );
     $page_html = "<h1>Peugeot 404</h1><p>¯\_(ツ)_/¯ Sorry!</p>";

@@ -29,5 +29,7 @@ const NAV_EXTERN = [
 ];
 const COPYRIGHT =
     'Copyright goes here';
+const DEFAULT_README =
+    true;
 
 ?>
