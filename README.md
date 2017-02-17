@@ -12,7 +12,7 @@ Contact: <lorancou@free.fr>
 Setup
 --------------------------------------------------------------------------------
 
-- Copy all files in a fully configured web server with PHP support
+- Copy all files in a fully configured web server with PHP support (>=5.6)
 - Rename php/config.php.template → php/config.php
 - Fill it with your info
 - I guess that's it: try opening index.php in you browser
