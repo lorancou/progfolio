@@ -20,10 +20,11 @@ const NAV_INTERN = [
     //...
 ];
 const NAV_EXTERN = [
-    //"images/github.png,GitHub,https://github.com/you",
-    //"images/twitter.png,Twitter,https://twitter.com/you",
-    //"images/linkedin.png,LinkedIn,https://linkedin.com/in/you",
-    //"images/email.png,E-mail,mailto:your@email.com",
+    //"symbols/github.png,GitHub,https://github.com/you",
+    //"symbols/twitter.png,Twitter,https://twitter.com/you",
+    //"symbols/linkedin.png,LinkedIn,https://linkedin.com/in/you",
+    //"symbols/stackexchange.png,StackExchange,http://stackexchange.com/users/you",
+    //"symbols/email.png,E-mail,mailto:your@email.com",
     //...
 ];
 const COPYRIGHT =
