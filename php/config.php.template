@@ -34,6 +34,6 @@ const COPYRIGHT =
 const DEFAULT_README =
     true;
 const EXTRA_HEADER =
-    '<!-- use this e.g. for an analytics script -->';
+    "<!-- use this e.g. for an analytics script -->\n";
 
 ?>
