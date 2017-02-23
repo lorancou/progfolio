@@ -31,6 +31,7 @@ require_once( 'php/load_page.php' );
         <link rel="stylesheet" type="text/css" href="/style/layout.css" />
         <link rel="stylesheet" type="text/css" href="/style/styles.css" />
         <link rel="icon" type="image/png" href="/images/icon.png"/>
+        <?php echo EXTRA_HEADER; ?>
     </head>
     <body>
         <div id="wrap">

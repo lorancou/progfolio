@@ -12,6 +12,8 @@ This program is free software - see README.md for details.
 
 const TITLE =
     'Your Name';
+const DESCRIPTION =
+    'Site description';
 const KEYWORDS =
     'comma,separated,keywords';
 const NAV_INTERN = [
@@ -31,5 +33,7 @@ const COPYRIGHT =
     'Copyright goes here';
 const DEFAULT_README =
     true;
+const EXTRA_HEADER =
+    '<!-- use this e.g. for an analytics script -->';
 
 ?>
