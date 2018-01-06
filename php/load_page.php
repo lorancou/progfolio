@@ -4,7 +4,7 @@
 load_page.php
 
 Progfolio
-Copyright (c) 2005-2017 Laurent Couvidou
+Copyright (c) 2005-2018 Laurent Couvidou
 Contact: lorancou@free.fr
 
 This program is free software - see README.md for details.
