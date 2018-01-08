@@ -36,17 +36,20 @@ require_once( 'php/load_page.php' );
     <body>
         <div id="wrap">
             <header>
+                &nbsp;
                 <div id="title">
                     <img src="symbols/icon.png" alt=""/> <a href="/"><?php echo TITLE; ?></a>
                 </div>
                 <nav>
                     <?php echo $nav_html; ?>
                 </nav>
+                &nbsp;
             </header>
             <main><?php echo $page_html; ?>
             </main>
             <footer>
                 <?php echo COPYRIGHT; ?>
+                &nbsp;
             </footer>
         </div>
     </body>

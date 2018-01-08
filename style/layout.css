@@ -15,21 +15,36 @@ html, body {
     margin: 0;
 }
 
+@media (min-width: 600px) {
+    main {
+        width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+
 #wrap {
-    width: 600px;
+    width: 100%;
     min-height: 100%;
     margin: 0 auto;
     position:relative;
 }
 
-header {
-    font-size: 0.9em;
-    width: 600px;
+footer, header {
+    background: lemonchiffon;
     height: 2em;
-    border-bottom: thin dotted black;
-    display: flex;
     line-height: 2em;
     vertical-align: middle;
+}
+
+header {
+    display: flex;
 }
 
 nav {
@@ -38,19 +53,12 @@ nav {
 }
 
 main {
-    width: 500px;
-    margin: 0 auto;
     padding-bottom:2em;
 }
 
 footer {
-    font-size: 0.9em;
-    width: 600px;
-    height: 2em;
+    width: 100%;
     text-align: right;
-    border-top: thin dotted black;
     position: absolute;
     bottom:0;
-    line-height: 2em;
-    vertical-align: middle;
 }
