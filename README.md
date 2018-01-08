@@ -6,7 +6,7 @@ portfolios and such. It just reads .md files from the filesystem and creates web
 pages with them. No need to bother with databases or user accounts or comments
 or Javascript frameworks. Just edit good old text files and feel the magic.
 
-Copyright © 2006-2017 Laurent Couvidou  
+Copyright © 2006-2018 Laurent Couvidou  
 Contact: <lorancou@free.fr>
 
 Setup
