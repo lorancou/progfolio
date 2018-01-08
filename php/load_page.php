@@ -23,7 +23,7 @@ $elements = explode( '/', $path );
 if ( empty( $elements[0] ) ) {
     $file = get_page_file( 'index' );
 } else {
-    $file = get_page_file( $elements[ 0 ] );
+    $file = get_page_file( end( $elements ) );
 }
 
 if ( file_exists( $file ) ) {
