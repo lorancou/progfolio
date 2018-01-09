@@ -15,20 +15,6 @@ html, body {
     margin: 0;
 }
 
-@media (min-width: 600px) {
-    main {
-        width: 600px;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 600px) {
-    main {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-}
-
 #wrap {
     width: 100%;
     min-height: 100%;
@@ -37,7 +23,7 @@ html, body {
 }
 
 footer, header {
-    background: lemonchiffon;
+    background: black;
     height: 2em;
     line-height: 2em;
     vertical-align: middle;
@@ -53,12 +39,21 @@ nav {
 }
 
 main {
+    margin: 0 10px;
     padding-bottom:2em;
+}
+
+@media (min-width: 600px) {
+    main {
+        width: 600px;
+        margin: 0 auto;
+    }
 }
 
 footer {
     width: 100%;
     text-align: right;
     position: absolute;
-    bottom:0;
+    bottom: 0;
+    color: white;
 }
