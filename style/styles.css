@@ -18,6 +18,18 @@ a:visited {
     text-decoration: none;
 }
 
+footer, header a:link {
+    color: snow;
+}
+
+footer, header a:visited {
+    color: snow;
+}
+
+footer, header {
+    color: snow;
+}    
+
 a:hover {
     color: skyblue;
     text-decoration: underline;

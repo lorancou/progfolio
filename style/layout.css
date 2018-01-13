@@ -24,8 +24,8 @@ html, body {
 
 footer, header {
     background: black;
-    height: 2em;
-    line-height: 2em;
+    height: 3em;
+    line-height: 3em;
     vertical-align: middle;
 }
 
@@ -55,5 +55,4 @@ footer {
     text-align: right;
     position: absolute;
     bottom: 0;
-    color: white;
 }
