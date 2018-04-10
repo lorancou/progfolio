@@ -48,5 +48,5 @@ Open Sans
 Parsedown
 - extern/markdown
 - MIT License
-- Copyright © 2013 Emanuil Rusev, erusev.com
+- Copyright © 2013-2018 Emanuil Rusev, erusev.com
 - <https://github.com/erusev/parsedown>
