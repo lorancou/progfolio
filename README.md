@@ -7,7 +7,7 @@ pages with them. No need to bother with databases or user accounts or comments
 or Javascript frameworks. Just edit good old text files and feel the magic.
 
 Copyright © 2006-2018 Laurent Couvidou  
-Contact: <progfolio@lorancou.net>
+Contact: <hello@lorancou.net>
 
 Setup
 --------------------------------------------------------------------------------
