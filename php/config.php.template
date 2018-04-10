@@ -31,8 +31,6 @@ const NAV_EXTERN = [
 ];
 const COPYRIGHT =
     'Copyright goes here';
-const DEFAULT_README =
-    true;
 const EXTRA_HEADER =
     "<!-- use this e.g. for an analytics script -->\n";
 
