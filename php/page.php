@@ -10,7 +10,7 @@ Contact: lorancou@free.fr
 This program is free software - see README.md for details.
 ------------------------------------------------------------------------------*/
 
-// Load nav
+// Build nav HTML
 $nav_html = "";
 foreach ( NAV_INTERN as $nav_intern ) {
     $nav_html .= "&nbsp;<a href=\"/$nav_intern\">/$nav_intern</a>";
@@ -23,7 +23,7 @@ foreach ( NAV_EXTERN as $nav_extern ) {
     }
 }
 
-// Load page
+// Build page HTML
 $file = 'pages/'.$page.'.md';
 if ( file_exists( $file ) ) {
     $content = file_get_contents( $file );

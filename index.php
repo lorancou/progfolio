@@ -16,13 +16,11 @@ $path = ltrim( $_SERVER[ 'REQUEST_URI' ], '/' );
 $elements = explode( '/', $path );
 if ( empty( $elements[ 0 ] ) ) {
     $page = 'index';
-    require( 'php/page.php' );
-} else if ( $elements[ 0 ] == 'ping' ) {
-    $ping = end( $elements );
-    require( 'php/ping.php' );
 } else {
     $page = end( $elements );
-    require( 'php/page.php' );
 }
+require_once( 'php/page.php' );
+
+// Could send something else than HTML here
 
 ?>
