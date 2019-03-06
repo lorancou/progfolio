@@ -39,11 +39,11 @@ nav {
 }
 
 main {
-    margin: 0 10px;
+    margin: 0 20px;
     padding-bottom:3em;
 }
 
-@media (min-width: 600px) {
+@media screen and (min-device-width: 1025px) and (min-width: 640px) {
     main {
         width: 600px;
         margin: 0 auto;
@@ -51,8 +51,13 @@ main {
 }
 
 footer {
+    display: flex;
     width: 100%;
-    text-align: right;
     position: absolute;
     bottom: 0;
+}
+
+#copyright {
+    flex-grow: 1;
+    text-align: right;
 }

@@ -16,12 +16,12 @@ const DESCRIPTION =
     'Site description';
 const KEYWORDS =
     'comma,separated,keywords';
-const NAV_INTERN = [
+const NAV = [
     //"mypage1", --> requires pages/mypage1.md
     //"mypage2", --> requires pages/mypage2.md
     //...
 ];
-const NAV_EXTERN = [
+const SOCIAL = [
     //"symbols/github.png,GitHub,https://github.com/you",
     //"symbols/twitter.png,Twitter,https://twitter.com/you",
     //"symbols/linkedin.png,LinkedIn,https://linkedin.com/in/you",
