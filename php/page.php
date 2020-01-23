@@ -59,14 +59,16 @@ foreach ( SOCIAL as $social ) {
     <body>
         <header>
             <div id="center">
-                <h1>
+                <h2>
                     <a href="/"><?php echo TITLE; ?></a>
-                </h1>
-                <nav>
-                    <?php echo $nav_html; ?>
-                </nav>
+                </h2>
             </div>
         </header>
+        <nav>
+            <div id="center">
+                <?php echo $nav_html; ?>
+            </div>
+        </nav>
         <main> 
             <div id="center">
                 <?php echo $page_html; ?>

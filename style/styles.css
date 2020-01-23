@@ -15,19 +15,14 @@ html, body {
 
 header {
     background-color: black;
-    color: snow;
 }
 
-header a:link {
-    color: snow;
+nav {
+    background-color: gainsboro;
 }
 
-header a:visited {
+header, header a:link, header a:visited {
     color: snow;
-}
-
-a {
-    text-decoration: none;
 }
 
 main {
@@ -40,5 +35,21 @@ footer {
 #center {
     width:930px;
     margin : auto;
-    padding:25px;
+    padding:15px;
+}
+
+a {
+    color: cornflowerblue;
+}
+
+nav, nav a:link, nav a:visited {
+    color: black;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
 }
