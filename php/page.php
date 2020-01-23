@@ -45,44 +45,45 @@ foreach ( SOCIAL as $social ) {
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
+        <title>Laurent Couvidou</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <title><?php echo TITLE; ?></title>
         <meta name="description" content="<?php echo DESCRIPTION; ?>" />
         <meta name="keywords" content="<?php echo KEYWORDS; ?>" />
         <meta name="robots" content="all"/>
         <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
-        <link rel="stylesheet" type="text/css" href="/style/reset.css" />
-        <link rel="stylesheet" type="text/css" href="/style/fonts.css" />
-        <link rel="stylesheet" type="text/css" href="/style/layout.css" />
         <link rel="stylesheet" type="text/css" href="/style/styles.css" />
         <link rel="icon" type="image/png" href="/images/icon.png"/>
         <?php echo EXTRA_HEADER; ?>
     </head>
     <body>
-        <div id="wrap">
-            <header>
-                &nbsp;
-                <div id="title">
-                    <img src="/symbols/icon.png" alt=""/> <a href="/"><?php echo TITLE; ?></a>
-                </div>
+        <header>
+            <div id="center">
+                <h1>
+                    <a href="/"><?php echo TITLE; ?></a>
+                </h1>
                 <nav>
                     <?php echo $nav_html; ?>
                 </nav>
-                &nbsp;
-            </header>
-            <main>
+            </div>
+        </header>
+        <main> 
+            <div id="center">
                 <?php echo $page_html; ?>
-            </main>
-            <footer>
-                &nbsp;
-                <div id="social">
-                    <?php echo $social_html; ?>
-                </div>
+            </div>
+        </main>
+        <footer>
+            <div id="center">
                 <div id="copyright">
                     <?php echo COPYRIGHT; ?>
                 </div>
-                &nbsp;
-            </footer>
-        </div>
+                <!--
+                Renders too small on Chrome mobile... Off for now
+                <div id="social">
+                    <?php echo $social_html; ?>
+                </div>
+                -->
+            </div>
+        </footer>
     </body>
-</html> 
+</html>
