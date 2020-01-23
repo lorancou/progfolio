@@ -26,6 +26,7 @@ header, header a:link, header a:visited {
 }
 
 main {
+    text-align:justify;
 }
 
 footer {
@@ -34,7 +35,7 @@ footer {
 
 #center {
     width:930px;
-    margin : auto;
+    margin: auto;
     padding:15px;
 }
 
