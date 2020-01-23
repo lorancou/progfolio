@@ -4,7 +4,7 @@
 page.php
 
 Progfolio
-Copyright (c) 2005-2019 Laurent Couvidou
+Copyright (c) 2005-2020 Laurent Couvidou
 Contact: lorancou@free.fr
 
 This program is free software - see README.md for details.
