@@ -17,6 +17,18 @@ header {
     background-color: black;
 }
 
+#flexor {
+    display: flex;
+    align-items: baseline;
+}
+
+#title {
+}
+
+#social {
+    margin-left: auto;
+}
+
 nav {
     background-color: gainsboro;
 }
@@ -33,10 +45,24 @@ footer {
     text-align:right;
 }
 
+#copyright {
+    border-top: thin dotted black;
+    padding-top: 15px;
+}
+
 #center {
-    width:930px;
     margin: auto;
     padding:15px;
+}
+
+@media (min-width: 1000px) {
+    #center {
+        width:930px;
+    }
+}
+
+img {
+    max-width: 100%;
 }
 
 a {
@@ -53,4 +79,9 @@ a:link, a:visited {
 
 a:hover, a:active {
     text-decoration: underline;
+}
+
+hr {
+    border: 0;
+    border-bottom: thin dotted black;
 }

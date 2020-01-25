@@ -51,6 +51,7 @@ foreach ( SOCIAL as $social ) {
         <meta name="description" content="<?php echo DESCRIPTION; ?>" />
         <meta name="keywords" content="<?php echo KEYWORDS; ?>" />
         <meta name="robots" content="all"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
         <link rel="stylesheet" type="text/css" href="/style/styles.css" />
         <link rel="icon" type="image/png" href="/images/icon.png"/>
@@ -59,9 +60,14 @@ foreach ( SOCIAL as $social ) {
     <body>
         <header>
             <div id="center">
-                <h2>
-                    <a href="/"><?php echo TITLE; ?></a>
-                </h2>
+                <div id="flexor">
+                    <div id="title">
+                        <h2><a href="/"><?php echo TITLE; ?></a></h2>
+                    </div>
+                    <div id="social">
+                        <?php echo $social_html; ?>
+                    </div>
+                </div>
             </div>
         </header>
         <nav>
@@ -79,12 +85,6 @@ foreach ( SOCIAL as $social ) {
                 <div id="copyright">
                     <?php echo COPYRIGHT; ?>
                 </div>
-                <!--
-                Renders too small on Chrome mobile... Off for now
-                <div id="social">
-                    <?php echo $social_html; ?>
-                </div>
-                -->
             </div>
         </footer>
     </body>
