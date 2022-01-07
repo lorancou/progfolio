@@ -4,8 +4,8 @@
 index.php
 
 Progfolio
-Copyright (c) 2005-2020 Laurent Couvidou
-Contact: lorancou@free.fr
+Copyright (c) 2005-2022 Laurent Couvidou
+Contact: hello@lorancou.net
 
 This program is free software - see README.md for details.
 ------------------------------------------------------------------------------*/
