@@ -4,7 +4,7 @@
 config.php.template
 
 Progfolio
-Copyright (c) 2005-2022 Laurent Couvidou
+Copyright (c) 2005-2023 Laurent Couvidou
 Contact: hello@lorancou.net
 
 This program is free software - see README.md for details.
@@ -22,8 +22,8 @@ const NAV = [
     //...
 ];
 const SOCIAL = [
+    //'symbols/mastodon.png,Mastodon,<a rel="me" href="https://my.mastodon.instance/@me">',
     //"symbols/github.png,GitHub,https://github.com/you",
-    //"symbols/twitter.png,Twitter,https://twitter.com/you",
     //"symbols/linkedin.png,LinkedIn,https://linkedin.com/in/you",
     //"symbols/stackexchange.png,StackExchange,http://stackexchange.com/users/you",
     //"symbols/email.png,E-mail,mailto:your@email.com",

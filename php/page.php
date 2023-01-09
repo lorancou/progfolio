@@ -4,7 +4,7 @@
 page.php
 
 Progfolio
-Copyright (c) 2005-2022 Laurent Couvidou
+Copyright (c) 2005-2023 Laurent Couvidou
 Contact: hello@lorancou.net
 
 This program is free software - see README.md for details.
@@ -34,7 +34,7 @@ $social_html = "";
 foreach ( SOCIAL as $social ) {
     $social = explode( ',', $social );
     if ( count( $social ) >= 3 ) {
-        $social_html .= "&nbsp;<a href=\"$social[2]\">"
+        $social_html .= "\n&nbsp;$social[2]"
                      . "<img src=\"/$social[0]\" alt=\"$social[1]\"/></a>";
     }
 }
@@ -54,8 +54,8 @@ foreach ( SOCIAL as $social ) {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
         <link rel="stylesheet" type="text/css" href="/style/styles.css" />
-        <link rel="icon" type="image/png" href="/images/icon.png"/>
-        <?php echo EXTRA_HEADER; ?>
+        <link rel="icon" type="image/png" href="/symbols/icon.png"/>
+        <?php echo EXTRA_HEADER."\n"; ?>
     </head>
     <body>
         <header>
@@ -65,14 +65,14 @@ foreach ( SOCIAL as $social ) {
                         <h2><a href="/"><?php echo TITLE; ?></a></h2>
                     </div>
                     <div id="social">
-                        <?php echo $social_html; ?>
+                        <?php echo $social_html."\n"; ?>
                     </div>
                 </div>
             </div>
         </header>
         <nav>
             <div id="center">
-                <?php echo $nav_html; ?>
+                <?php echo $nav_html."\n"; ?>
             </div>
         </nav>
         <main> 
@@ -83,7 +83,7 @@ foreach ( SOCIAL as $social ) {
         <footer>
             <div id="center">
                 <div id="copyright">
-                    <?php echo COPYRIGHT; ?>
+                    <?php echo COPYRIGHT."\n"; ?>
                 </div>
             </div>
         </footer>
